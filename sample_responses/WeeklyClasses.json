@@ -1,0 +1,1029 @@
+{
+  "CalendarData": [
+    {
+      "ZoneName": "Studio Fitness",
+      "ClassesPerHour": [
+        {
+          "Hour": "1900-01-01T09:00:00",
+          "ClassesPerDay": [
+            [],
+            [
+              {
+                "Id": 132988,
+                "Status": "Awaitable",
+                "StatusReason": null,
+                "Name": "TBC",
+                "StartTime": "2022-03-20T09:30:00",
+                "Duration": "PT1H-5M",
+                "BookingIndicator": {
+                  "Indicator": 0,
+                  "Limit": 20,
+                  "Available": 0
+                },
+                "Trainer": "Katarzyna Grablowska",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 18,
+                  "RatingsCount": 16407,
+                  "Rating": 4.8333028585359905,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [],
+            [
+              {
+                "Id": 134283,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Pilates",
+                "StartTime": "2022-03-22T09:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Martyna Aulak",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 84,
+                  "RatingsCount": 6989,
+                  "Rating": 4.859779653741594,
+                  "Ranking": 4.9
+                }
+              }
+            ],
+            [
+              {
+                "Id": 134981,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "ABT",
+                "StartTime": "2022-03-23T09:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "NICOLA EGWUATU",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 5,
+                  "RatingsCount": 562,
+                  "Rating": 4.804270462633452,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 135546,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Full Body Workout",
+                "StartTime": "2022-03-24T09:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Katarzyna Grablowska",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 63,
+                  "RatingsCount": 2595,
+                  "Rating": 4.884778420038535,
+                  "Ranking": 4.9
+                }
+              }
+            ],
+            [
+              {
+                "Id": 136146,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "ANTYSTRES - Harmonia",
+                "StartTime": "2022-03-25T09:00:00",
+                "Duration": "PT45M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Martyna Aulak",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 127,
+                  "RatingsCount": 1665,
+                  "Rating": 4.846246246246246,
+                  "Ranking": 4.8
+                }
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T10:00:00",
+          "ClassesPerDay": [
+            [],
+            [
+              {
+                "Id": 133028,
+                "Status": "Awaitable",
+                "StatusReason": null,
+                "Name": "Po\u015bladki i Brzuch",
+                "StartTime": "2022-03-20T10:30:00",
+                "Duration": "PT1H-5M",
+                "BookingIndicator": {
+                  "Indicator": 0,
+                  "Limit": 20,
+                  "Available": 0
+                },
+                "Trainer": "Katarzyna Grablowska",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 52,
+                  "RatingsCount": 14688,
+                  "Rating": 4.846949891067538,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [
+              {
+                "Id": 136216,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Brzuch i Stretch",
+                "StartTime": "2022-03-25T10:00:00",
+                "Duration": "PT45M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Martyna Aulak",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 58,
+                  "RatingsCount": 2465,
+                  "Rating": 4.806490872210953,
+                  "Ranking": 4.8
+                }
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T11:00:00",
+          "ClassesPerDay": [
+            [],
+            [
+              {
+                "Id": 133029,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Trening Metaboliczny (Tabata)",
+                "StartTime": "2022-03-20T11:30:00",
+                "Duration": "PT20M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 15,
+                  "Available": 14
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 102,
+                  "RatingsCount": 98,
+                  "Rating": 4.704081632653061,
+                  "Ranking": 4.7
+                }
+              }
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "Hour": "1900-01-01T18:00:00",
+          "ClassesPerDay": [
+            [],
+            [],
+            [
+              {
+                "Id": 134280,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "P\u0142aski brzuch",
+                "StartTime": "2022-03-21T18:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "OLGA GONTARZ-OR\u0141OWSKA",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 50,
+                  "RatingsCount": 2319,
+                  "Rating": 4.836567485985339,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 133684,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Full Body Workout",
+                "StartTime": "2022-03-22T18:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "DAGMARA CZY\u017bEWSKA",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 63,
+                  "RatingsCount": 2595,
+                  "Rating": 4.884778420038535,
+                  "Ranking": 4.9
+                }
+              }
+            ],
+            [
+              {
+                "Id": 135543,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "TBC",
+                "StartTime": "2022-03-23T18:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Katarzyna Grablowska",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 18,
+                  "RatingsCount": 16407,
+                  "Rating": 4.8333028585359905,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 135079,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "ANTYSTRES - Energia",
+                "StartTime": "2022-03-24T18:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "DAGMARA CZY\u017bEWSKA",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 126,
+                  "RatingsCount": 1228,
+                  "Rating": 4.841205211726384,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 136769,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Strong Body",
+                "StartTime": "2022-03-25T18:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Katarzyna Grablowska",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 108,
+                  "RatingsCount": 42,
+                  "Rating": 5.0,
+                  "Ranking": 5.0
+                }
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T19:00:00",
+          "ClassesPerDay": [
+            [],
+            [],
+            [
+              {
+                "Id": 134281,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Interwa\u0142",
+                "StartTime": "2022-03-21T19:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "OLGA GONTARZ-OR\u0141OWSKA",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 70,
+                  "RatingsCount": 4498,
+                  "Rating": 4.9035126722988,
+                  "Ranking": 4.9
+                }
+              }
+            ],
+            [
+              {
+                "Id": 133685,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "ANTYSTRES - Energia",
+                "StartTime": "2022-03-22T19:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "DAGMARA CZY\u017bEWSKA",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 126,
+                  "RatingsCount": 1228,
+                  "Rating": 4.841205211726384,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 135544,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Shape",
+                "StartTime": "2022-03-23T19:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Katarzyna Grablowska",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 73,
+                  "RatingsCount": 6423,
+                  "Rating": 4.875291919663709,
+                  "Ranking": 4.9
+                }
+              }
+            ],
+            [
+              {
+                "Id": 135080,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Tabata",
+                "StartTime": "2022-03-24T19:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "DAGMARA CZY\u017bEWSKA",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 17,
+                  "RatingsCount": 8765,
+                  "Rating": 4.898916143753565,
+                  "Ranking": 4.9
+                }
+              }
+            ],
+            [
+              {
+                "Id": 136770,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Po\u015bladki i Brzuch",
+                "StartTime": "2022-03-25T19:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Katarzyna Grablowska",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 52,
+                  "RatingsCount": 14688,
+                  "Rating": 4.846949891067538,
+                  "Ranking": 4.8
+                }
+              }
+            ]
+          ]
+        },
+        {
+          "Hour": "1900-01-01T20:00:00",
+          "ClassesPerDay": [
+            [],
+            [],
+            [
+              {
+                "Id": 134282,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Stretching",
+                "StartTime": "2022-03-21T20:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "OLGA GONTARZ-OR\u0141OWSKA",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 78,
+                  "RatingsCount": 9456,
+                  "Rating": 4.8802876480541455,
+                  "Ranking": 4.9
+                }
+              }
+            ],
+            [],
+            [],
+            [
+              {
+                "Id": 135081,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Joga",
+                "StartTime": "2022-03-24T20:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Dorota W\u0119sierska",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 71,
+                  "RatingsCount": 7457,
+                  "Rating": 4.845782486254526,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 136771,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Metaboliczny (Tabata)",
+                "StartTime": "2022-03-25T20:00:00",
+                "Duration": "PT20M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 20,
+                  "Available": 20
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 102,
+                  "RatingsCount": 98,
+                  "Rating": 4.704081632653061,
+                  "Ranking": 4.7
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ZoneName": "Strefa Si\u0142owni",
+      "ClassesPerHour": [
+        {
+          "Hour": "1900-01-01T11:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 132693,
+                "Status": "Unavailable",
+                "StatusReason": "Class already ended",
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-19T11:30:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 4,
+                  "Limit": 5,
+                  "Available": 4
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "Hour": "1900-01-01T12:00:00",
+          "ClassesPerDay": [
+            [],
+            [
+              {
+                "Id": 132987,
+                "Status": "Bookable",
+                "StatusReason": null,
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-20T12:30:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 5,
+                  "Available": 5
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "Hour": "1900-01-01T17:00:00",
+          "ClassesPerDay": [
+            [],
+            [],
+            [],
+            [
+              {
+                "Id": 134921,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-22T17:00:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 5,
+                  "Available": 5
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              },
+              {
+                "Id": 134923,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "ABS (Brzuch)",
+                "StartTime": "2022-03-22T17:30:00",
+                "Duration": "PT20M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 15,
+                  "Available": 15
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 104,
+                  "RatingsCount": 345,
+                  "Rating": 4.823188405797102,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [],
+            [
+              {
+                "Id": 136143,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-24T17:00:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 5,
+                  "Available": 5
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              },
+              {
+                "Id": 136145,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Metaboliczny (Tabata)",
+                "StartTime": "2022-03-24T17:30:00",
+                "Duration": "PT20M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 15,
+                  "Available": 15
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 102,
+                  "RatingsCount": 98,
+                  "Rating": 4.704081632653061,
+                  "Ranking": 4.7
+                }
+              }
+            ],
+            []
+          ]
+        },
+        {
+          "Hour": "1900-01-01T19:00:00",
+          "ClassesPerDay": [
+            [],
+            [],
+            [
+              {
+                "Id": 134278,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-21T19:30:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 5,
+                  "Available": 5
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 134922,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-22T19:30:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 5,
+                  "Available": 5
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 135541,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-23T19:30:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 5,
+                  "Available": 5
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 136144,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-24T19:30:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 5,
+                  "Available": 5
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [
+              {
+                "Id": 136774,
+                "Status": "Unavailable",
+                "StatusReason": "Too soon to book",
+                "Name": "Trening Adaptacyjny",
+                "StartTime": "2022-03-25T19:30:00",
+                "Duration": "PT15M",
+                "BookingIndicator": {
+                  "Indicator": 5,
+                  "Limit": 5,
+                  "Available": 5
+                },
+                "Trainer": "Trener Trener",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 88,
+                  "RatingsCount": 202,
+                  "Rating": 4.762376237623762,
+                  "Ranking": 4.8
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ZoneName": "Zdrofit Gdynia Chwarzno",
+      "ClassesPerHour": [
+        {
+          "Hour": "1900-01-01T09:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 139229,
+                "Status": "Unavailable",
+                "StatusReason": "Class already ended",
+                "Name": "Shape",
+                "StartTime": "2022-03-19T09:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 2,
+                  "Limit": 20,
+                  "Available": 5
+                },
+                "Trainer": "Anastaziia Tykvenko",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 73,
+                  "RatingsCount": 6423,
+                  "Rating": 4.875291919663709,
+                  "Ranking": 4.9
+                }
+              }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "Hour": "1900-01-01T10:00:00",
+          "ClassesPerDay": [
+            [
+              {
+                "Id": 139241,
+                "Status": "Unavailable",
+                "StatusReason": "Class already ended",
+                "Name": "P\u0142aski brzuch",
+                "StartTime": "2022-03-19T10:00:00",
+                "Duration": "PT55M",
+                "BookingIndicator": {
+                  "Indicator": 2,
+                  "Limit": 20,
+                  "Available": 8
+                },
+                "Trainer": "Anastaziia Tykvenko",
+                "Users": [],
+                "HasRelatives": false,
+                "AllowBookSeatNumber": false,
+                "IsClassAvailableOnline": false,
+                "ClassRatingSummaryInfo": {
+                  "TimeTableId": 50,
+                  "RatingsCount": 2319,
+                  "Rating": 4.836567485985339,
+                  "Ranking": 4.8
+                }
+              }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        }
+      ]
+    }
+  ],
+  "PagerData": {
+    "Days": [
+      "2022-03-19",
+      "2022-03-20",
+      "2022-03-21",
+      "2022-03-22",
+      "2022-03-23",
+      "2022-03-24",
+      "2022-03-25"
+    ],
+    "NextDate": "2022-03-26",
+    "PreviousDate": "2022-03-12",
+    "Date": "2022-03-19",
+    "CanGoForward": true,
+    "CanGoBack": false,
+    "QueryStartDate": "2022-03-19",
+    "QueryEndDate": "2022-03-25"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "Tickets": [
+        {
+            "TimeTableEventId": 132824,
+            "Name": "TBC",
+            "StartTime": "2022-03-20T09:30:00",
+            "ZoneName": "Sala Fitness",
+            "UserName": "Klubowicz Benefit",
+            "UserNumber": "443000191",
+            "UserId": 543104,
+            "Trainer": "Adrianna Parzych"
+        }
+    ],
+    "ClassId": 132824,
+    "UserId": 543104
+}

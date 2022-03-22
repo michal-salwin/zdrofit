@@ -1,0 +1,1154 @@
+[
+  {
+    "Id": 7,
+    "Name": "Zdrofit Bemowo",
+    "FullName": "Zdrofit Bemowo",
+    "Address": "Dywizjonu 303 129b",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "407",
+    "Latitude": 52.2456,
+    "Longitude": 20.9059,
+    "OpeningDate": "2012-01-01T00:00:00",
+    "OpeningDateLocal": "2012-01-01T00:00:00"
+  },
+  {
+    "Id": 9,
+    "Name": "Zdrofit Bielany Marymoncka",
+    "FullName": "Zdrofit Bielany Marymoncka",
+    "Address": "Marymoncka 34",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "409",
+    "Latitude": 52.2827,
+    "Longitude": 20.9591,
+    "OpeningDate": "2014-03-01T00:00:00",
+    "OpeningDateLocal": "2014-03-01T00:00:00"
+  },
+  {
+    "Id": 46,
+    "Name": "Zdrofit Bielany Przy Agorze",
+    "FullName": "Zdrofit Bielany Przy Agorze",
+    "Address": "Przy Agorze 22",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "446",
+    "Latitude": 52.2912,
+    "Longitude": 20.9363,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 25,
+    "Name": "Zdrofit Centrum Krucza",
+    "FullName": "Zdrofit Centrum Krucza",
+    "Address": "Krucza 50",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "425",
+    "Latitude": 52.2315,
+    "Longitude": 21.0164,
+    "OpeningDate": "2018-05-16T00:00:00",
+    "OpeningDateLocal": "2018-05-16T00:00:00"
+  },
+  {
+    "Id": 66,
+    "Name": "Zdrofit Centrum Rondo ONZ",
+    "FullName": "Zdrofit Centrum Rondo ONZ",
+    "Address": "Rondo ONZ 1",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "466",
+    "Latitude": 52.2328,
+    "Longitude": 20.9995,
+    "OpeningDate": "2020-09-14T00:00:00",
+    "OpeningDateLocal": "2020-09-14T00:00:00"
+  },
+  {
+    "Id": 47,
+    "Name": "Zdrofit CH Arkadia",
+    "FullName": "Zdrofit CH Arkadia",
+    "Address": "Al. Jana Paw\u0142a II 82",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "447",
+    "Latitude": 52.2572,
+    "Longitude": 20.9845,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 60,
+    "Name": "Zdrofit Galeria M\u0142ociny",
+    "FullName": "Zdrofit Galeria M\u0142ociny",
+    "Address": "Zgrupowania AK \"Kampinos\" 15",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "460",
+    "Latitude": 52.2941,
+    "Longitude": 20.9303,
+    "OpeningDate": "2019-05-23T00:00:00",
+    "OpeningDateLocal": "2019-05-23T00:00:00"
+  },
+  {
+    "Id": 31,
+    "Name": "Zdrofit Gda\u0144sk Alchemia",
+    "FullName": "Zdrofit Gda\u0144sk Alchemia",
+    "Address": "Al. Grunwaldzka 411",
+    "City": {
+      "Id": "1720980",
+      "Name": "Gda\u0144sk",
+      "Country": "PL"
+    },
+    "ClubNumber": "431",
+    "Latitude": 54.3995,
+    "Longitude": 18.5768,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 32,
+    "Name": "Zdrofit Gda\u0144sk CH Manhattan",
+    "FullName": "Zdrofit Gda\u0144sk CH Manhattan",
+    "Address": "Al. Grunwaldzka 82",
+    "City": {
+      "Id": "1720980",
+      "Name": "Gda\u0144sk",
+      "Country": "PL"
+    },
+    "ClubNumber": "432",
+    "Latitude": 54.3772,
+    "Longitude": 18.6075,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 34,
+    "Name": "Zdrofit Gda\u0144sk CH Rental Park",
+    "FullName": "Zdrofit Gda\u0144sk CH Rental Park",
+    "Address": "Przywidzka 9",
+    "City": {
+      "Id": "1720980",
+      "Name": "Gda\u0144sk",
+      "Country": "PL"
+    },
+    "ClubNumber": "434",
+    "Latitude": 54.3227,
+    "Longitude": 18.5528,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 35,
+    "Name": "Zdrofit Gda\u0144sk Che\u0142m",
+    "FullName": "Zdrofit Gda\u0144sk Che\u0142m",
+    "Address": "Cieszy\u0144skiego 1B",
+    "City": {
+      "Id": "1720980",
+      "Name": "Gda\u0144sk",
+      "Country": "PL"
+    },
+    "ClubNumber": "435",
+    "Latitude": 54.3378,
+    "Longitude": 18.6119,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 33,
+    "Name": "Zdrofit Gda\u0144sk Przymorze",
+    "FullName": "Zdrofit Gda\u0144sk Przymorze",
+    "Address": "Lecha Kaczy\u0144skiego 20",
+    "City": {
+      "Id": "1720980",
+      "Name": "Gda\u0144sk",
+      "Country": "PL"
+    },
+    "ClubNumber": "433",
+    "Latitude": 54.4119,
+    "Longitude": 18.6023,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 36,
+    "Name": "Zdrofit Gda\u0144sk Suchanino",
+    "FullName": "Zdrofit Gda\u0144sk Suchanino",
+    "Address": "Zygmunta Noskowskiego 1",
+    "City": {
+      "Id": "1720980",
+      "Name": "Gda\u0144sk",
+      "Country": "PL"
+    },
+    "ClubNumber": "436",
+    "Latitude": 54.3555,
+    "Longitude": 18.6141,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 37,
+    "Name": "Zdrofit Gdynia CH Riviera",
+    "FullName": "Zdrofit Gdynia CH Riviera",
+    "Address": "Kazimierza G\u00f3rskiego 2",
+    "City": {
+      "Id": "1699272",
+      "Name": "Gdynia",
+      "Country": "PL"
+    },
+    "ClubNumber": "437",
+    "Latitude": 54.5024,
+    "Longitude": 18.5318,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 43,
+    "Name": "Zdrofit Gdynia Chwarzno",
+    "FullName": "Zdrofit Gdynia Chwarzno",
+    "Address": "Czes\u0142awa Niemena 2",
+    "City": {
+      "Id": "1699272",
+      "Name": "Gdynia",
+      "Country": "PL"
+    },
+    "ClubNumber": "443",
+    "Latitude": 54.5002,
+    "Longitude": 18.4377,
+    "OpeningDate": "2018-11-26T00:00:00",
+    "OpeningDateLocal": "2018-11-26T00:00:00"
+  },
+  {
+    "Id": 65,
+    "Name": "Zdrofit Gdynia Karwiny",
+    "FullName": "Zdrofit Gdynia Karwiny",
+    "Address": "Nowowiczli\u0144ska 35",
+    "City": {
+      "Id": "1699272",
+      "Name": "Gdynia",
+      "Country": "PL"
+    },
+    "ClubNumber": "465",
+    "Latitude": 54.4733,
+    "Longitude": 18.4741,
+    "OpeningDate": "2019-12-17T00:00:00",
+    "OpeningDateLocal": "2019-12-17T00:00:00"
+  },
+  {
+    "Id": 2,
+    "Name": "Zdrofit Goc\u0142aw",
+    "FullName": "Zdrofit Goc\u0142aw",
+    "Address": "Ostrobramska 101",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "401",
+    "Latitude": 52.2354,
+    "Longitude": 21.0844,
+    "OpeningDate": "2005-05-04T00:00:00",
+    "OpeningDateLocal": "2005-05-04T00:00:00"
+  },
+  {
+    "Id": 23,
+    "Name": "Zdrofit Goc\u0142aw Atrium Promenada",
+    "FullName": "Zdrofit Goc\u0142aw Atrium Promenada",
+    "Address": "Ostrobramska 75c",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "423",
+    "Latitude": 52.2316,
+    "Longitude": 21.1055,
+    "OpeningDate": "2018-05-11T00:00:00",
+    "OpeningDateLocal": "2018-05-11T00:00:00"
+  },
+  {
+    "Id": 26,
+    "Name": "Zdrofit Kielce Galeria Echo",
+    "FullName": "Zdrofit Kielce Galeria Echo",
+    "Address": "\u015awi\u0119tokrzyska 20",
+    "City": {
+      "Id": "1720983",
+      "Name": "Kielce",
+      "Country": "PL"
+    },
+    "ClubNumber": "426",
+    "Latitude": 50.8811,
+    "Longitude": 20.6462,
+    "OpeningDate": "2018-05-21T00:00:00",
+    "OpeningDateLocal": "2018-05-21T00:00:00"
+  },
+  {
+    "Id": 20,
+    "Name": "Zdrofit Kielce Galeria Korona",
+    "FullName": "Zdrofit Kielce Galeria Korona",
+    "Address": "Warszawska 26",
+    "City": {
+      "Id": "1720983",
+      "Name": "Kielce",
+      "Country": "PL"
+    },
+    "ClubNumber": "420",
+    "Latitude": 50.8757,
+    "Longitude": 20.6358,
+    "OpeningDate": "2018-03-07T00:00:00",
+    "OpeningDateLocal": "2018-03-07T00:00:00"
+  },
+  {
+    "Id": 24,
+    "Name": "Zdrofit Koszalin Atrium Koszalin",
+    "FullName": "Zdrofit Koszalin Atrium Koszalin",
+    "Address": "Paderewskiego 1",
+    "City": {
+      "Id": "1721032",
+      "Name": "Koszalin",
+      "Country": "PL"
+    },
+    "ClubNumber": "424",
+    "Latitude": 54.1775,
+    "Longitude": 16.2015,
+    "OpeningDate": "2018-05-15T00:00:00",
+    "OpeningDateLocal": "2018-05-15T00:00:00"
+  },
+  {
+    "Id": 30,
+    "Name": "Zdrofit Koszalin Galeria Kosmos",
+    "FullName": "Zdrofit Koszalin Galeria Kosmos",
+    "Address": "Stefana Okrzei 3",
+    "City": {
+      "Id": "1721032",
+      "Name": "Koszalin",
+      "Country": "PL"
+    },
+    "ClubNumber": "430",
+    "Latitude": 54.1899,
+    "Longitude": 16.1723,
+    "OpeningDate": "2018-07-26T00:00:00",
+    "OpeningDateLocal": "2018-07-26T00:00:00"
+  },
+  {
+    "Id": 75,
+    "Name": "Zdrofit Lazurowa",
+    "FullName": "Zdrofit Lazurowa",
+    "Address": "Lazurowa 71A",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "474",
+    "Latitude": 52.2302,
+    "Longitude": 20.8924,
+    "OpeningDate": "2022-01-10T00:00:00",
+    "OpeningDateLocal": "2022-01-10T00:00:00"
+  },
+  {
+    "Id": 1,
+    "Name": "Zdrofit Legionowo DH Maxim",
+    "FullName": "Zdrofit Legionowo DH Maxim",
+    "Address": "Siwi\u0144skiego 2",
+    "City": {
+      "Id": "1705613",
+      "Name": "Legionowo",
+      "Country": "PL"
+    },
+    "ClubNumber": "402",
+    "Latitude": 52.3906,
+    "Longitude": 20.9192,
+    "OpeningDate": "2006-12-01T00:00:00",
+    "OpeningDateLocal": "2006-12-01T00:00:00"
+  },
+  {
+    "Id": 22,
+    "Name": "Zdrofit Legionowo Zegrzy\u0144ska",
+    "FullName": "Zdrofit Legionowo Zegrzy\u0144ska",
+    "Address": "Zegrzy\u0144ska 1d",
+    "City": {
+      "Id": "1705613",
+      "Name": "Legionowo",
+      "Country": "PL"
+    },
+    "ClubNumber": "422",
+    "Latitude": 52.4024,
+    "Longitude": 20.9464,
+    "OpeningDate": "2018-05-08T00:00:00",
+    "OpeningDateLocal": "2018-05-08T00:00:00"
+  },
+  {
+    "Id": 73,
+    "Name": "Zdrofit Mennica",
+    "FullName": "Zdrofit Wola Mennica Legacy Tower",
+    "Address": "Prosta 18",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "472",
+    "Latitude": 52.2327,
+    "Longitude": 20.9907,
+    "OpeningDate": "2022-01-03T00:00:00",
+    "OpeningDateLocal": "2022-01-03T00:00:00"
+  },
+  {
+    "Id": 12,
+    "Name": "Zdrofit Metro Dw. Gda\u0144ski",
+    "FullName": "Zdrofit Metro Dw. Gda\u0144ski",
+    "Address": "Inflancka 4c",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "412",
+    "Latitude": 52.2559,
+    "Longitude": 20.9931,
+    "OpeningDate": "2016-10-01T00:00:00",
+    "OpeningDateLocal": "2016-10-01T00:00:00"
+  },
+  {
+    "Id": 55,
+    "Name": "Zdrofit Mokot\u00f3w Al. Wilanowska",
+    "FullName": "Zdrofit Mokot\u00f3w Al. Wilanowska",
+    "Address": "Al. Wilanowska 361",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "455",
+    "Latitude": 52.1791,
+    "Longitude": 21.013,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 59,
+    "Name": "Zdrofit Mokot\u00f3w Bobrowiecka",
+    "FullName": "Zdrofit Mokot\u00f3w Bobrowiecka",
+    "Address": "Bobrowiecka 8",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "459",
+    "Latitude": 52.1986,
+    "Longitude": 21.0474,
+    "OpeningDate": "2019-04-09T00:00:00",
+    "OpeningDateLocal": "2019-04-09T00:00:00"
+  },
+  {
+    "Id": 4,
+    "Name": "Zdrofit Mokot\u00f3w Bukowi\u0144ska",
+    "FullName": "Zdrofit Mokot\u00f3w Bukowi\u0144ska",
+    "Address": "Bukowi\u0144ska 22",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "404",
+    "Latitude": 52.1811,
+    "Longitude": 21.0273,
+    "OpeningDate": "2009-11-03T00:00:00",
+    "OpeningDateLocal": "2009-11-03T00:00:00"
+  },
+  {
+    "Id": 50,
+    "Name": "Zdrofit Mokot\u00f3w CH Plac Unii",
+    "FullName": "Zdrofit Mokot\u00f3w CH Plac Unii",
+    "Address": "Pu\u0142awska 2",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "450",
+    "Latitude": 52.2126,
+    "Longitude": 21.0197,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 51,
+    "Name": "Zdrofit Mokot\u00f3w Europlex",
+    "FullName": "Zdrofit Mokot\u00f3w Europlex",
+    "Address": "Pu\u0142awska 17",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "451",
+    "Latitude": 52.21,
+    "Longitude": 21.0222,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 54,
+    "Name": "Zdrofit Mokot\u00f3w Galeria Mokot\u00f3w",
+    "FullName": "Zdrofit Mokot\u00f3w Galeria Mokot\u00f3w",
+    "Address": "Wo\u0142oska 12",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "454",
+    "Latitude": 52.1799,
+    "Longitude": 21.0039,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 10,
+    "Name": "Zdrofit Mokot\u00f3w Konstruktorska",
+    "FullName": "Zdrofit Mokot\u00f3w Konstruktorska",
+    "Address": "Konstruktorska 13",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "410",
+    "Latitude": 52.1848,
+    "Longitude": 20.9889,
+    "OpeningDate": "2015-02-14T00:00:00",
+    "OpeningDateLocal": "2015-02-14T00:00:00"
+  },
+  {
+    "Id": 15,
+    "Name": "Zdrofit Mokot\u00f3w Marynarska",
+    "FullName": "Zdrofit Mokot\u00f3w Marynarska",
+    "Address": "Marynarska 15",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "415",
+    "Latitude": 52.178,
+    "Longitude": 20.999,
+    "OpeningDate": "2017-04-08T00:00:00",
+    "OpeningDateLocal": "2017-04-08T00:00:00"
+  },
+  {
+    "Id": 44,
+    "Name": "Zdrofit Mokot\u00f3w Warszawianka",
+    "FullName": "Zdrofit Mokot\u00f3w Warszawianka",
+    "Address": "Dominika Merliniego 4",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "444",
+    "Latitude": 52.195,
+    "Longitude": 21.0263,
+    "OpeningDate": "2019-01-09T00:00:00",
+    "OpeningDateLocal": "2019-01-09T00:00:00"
+  },
+  {
+    "Id": 74,
+    "Name": "Zdrofit NPark Stara Iwiczna",
+    "FullName": "Zdrofit NPark Stara Iwiczna",
+    "Address": "Nowa 4a",
+    "City": {
+      "Id": "108900000002391778",
+      "Name": "Stara Iwiczna",
+      "Country": "PL"
+    },
+    "ClubNumber": "473",
+    "Latitude": 52.0827,
+    "Longitude": 21.0104,
+    "OpeningDate": "2022-01-03T00:00:00",
+    "OpeningDateLocal": "2022-01-03T00:00:00"
+  },
+  {
+    "Id": 29,
+    "Name": "Zdrofit Ochota Aleje Jerozolimskie",
+    "FullName": "Zdrofit Ochota Aleje Jerozolimskie",
+    "Address": "Al. Jerozolimskie 100",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "429",
+    "Latitude": 52.2219,
+    "Longitude": 20.9766,
+    "OpeningDate": "2018-07-25T00:00:00",
+    "OpeningDateLocal": "2018-07-25T00:00:00"
+  },
+  {
+    "Id": 17,
+    "Name": "Zdrofit Ochota Gr\u00f3jecka",
+    "FullName": "Zdrofit Ochota Gr\u00f3jecka",
+    "Address": "Gr\u00f3jecka 208",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "417",
+    "Latitude": 52.1996,
+    "Longitude": 20.9656,
+    "OpeningDate": "2017-10-18T00:00:00",
+    "OpeningDateLocal": "2017-10-18T00:00:00"
+  },
+  {
+    "Id": 14,
+    "Name": "Zdrofit Otwock",
+    "FullName": "Zdrofit Otwock",
+    "Address": "Ko\u0142\u0142\u0105taja 4",
+    "City": {
+      "Id": "1721774",
+      "Name": "Otwock",
+      "Country": "PL"
+    },
+    "ClubNumber": "414",
+    "Latitude": 52.1101,
+    "Longitude": 21.2573,
+    "OpeningDate": "2017-01-07T00:00:00",
+    "OpeningDateLocal": "2017-01-07T00:00:00"
+  },
+  {
+    "Id": 53,
+    "Name": "Zdrofit Piaseczno Pawia",
+    "FullName": "Zdrofit Piaseczno Pawia",
+    "Address": "Pawia 11",
+    "City": {
+      "Id": "1710356",
+      "Name": "Piaseczno",
+      "Country": "PL"
+    },
+    "ClubNumber": "453",
+    "Latitude": 52.0794,
+    "Longitude": 21.0083,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 57,
+    "Name": "Zdrofit Piast\u00f3w Pasa\u017c Warszawska",
+    "FullName": "Zdrofit Piast\u00f3w Pasa\u017c Warszawska",
+    "Address": "Warszawska 43",
+    "City": {
+      "Id": "1721799",
+      "Name": "Piast\u00f3w",
+      "Country": "PL"
+    },
+    "ClubNumber": "457",
+    "Latitude": 52.1836,
+    "Longitude": 20.8396,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 76,
+    "Name": "Zdrofit Plac Kaszubski Gdynia",
+    "FullName": "Zdrofit Plac Kaszubski Gdynia",
+    "Address": "Plac Kaszubski 17",
+    "City": {
+      "Id": "1699272",
+      "Name": "Gdynia",
+      "Country": "PL"
+    },
+    "ClubNumber": "475",
+    "Latitude": 54.522,
+    "Longitude": 18.5436,
+    "OpeningDate": "2021-12-01T00:00:00",
+    "OpeningDateLocal": "2021-12-01T00:00:00"
+  },
+  {
+    "Id": 21,
+    "Name": "Zdrofit P\u0142ock Mazovia",
+    "FullName": "Zdrofit P\u0142ock Mazovia",
+    "Address": "Wyszogrodzka 127",
+    "City": {
+      "Id": "1721064",
+      "Name": "P\u0142ock",
+      "Country": "PL"
+    },
+    "ClubNumber": "421",
+    "Latitude": 52.5377,
+    "Longitude": 19.7515,
+    "OpeningDate": "2018-03-10T00:00:00",
+    "OpeningDateLocal": "2018-03-10T00:00:00"
+  },
+  {
+    "Id": 41,
+    "Name": "Zdrofit Praga Pn. Koneser",
+    "FullName": "Zdrofit Praga Pn. Koneser",
+    "Address": "Plac Konesera 5",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "441",
+    "Latitude": 52.2554,
+    "Longitude": 21.0443,
+    "OpeningDate": "2018-11-06T00:00:00",
+    "OpeningDateLocal": "2018-11-06T00:00:00"
+  },
+  {
+    "Id": 42,
+    "Name": "Zdrofit Pruszk\u00f3w CH Nowa Stacja",
+    "FullName": "Zdrofit Pruszk\u00f3w CH Nowa Stacja",
+    "Address": "Henryka Sienkiewicza 19",
+    "City": {
+      "Id": "1721075",
+      "Name": "Pruszk\u00f3w",
+      "Country": "PL"
+    },
+    "ClubNumber": "442",
+    "Latitude": 52.1654,
+    "Longitude": 20.7932,
+    "OpeningDate": "2018-11-10T00:00:00",
+    "OpeningDateLocal": "2018-11-10T00:00:00"
+  },
+  {
+    "Id": 39,
+    "Name": "Zdrofit Sopot Sopot Centrum",
+    "FullName": "Zdrofit Sopot Sopot Centrum",
+    "Address": "Dworcowa 7",
+    "City": {
+      "Id": "1714916",
+      "Name": "Sopot",
+      "Country": "PL"
+    },
+    "ClubNumber": "439",
+    "Latitude": 54.4417,
+    "Longitude": 18.5621,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 40,
+    "Name": "Zdrofit \u015ar\u00f3dmie\u015bcie Metro Politechnika",
+    "FullName": "Zdrofit \u015ar\u00f3dmie\u015bcie Metro Politechnika",
+    "Address": "Polna 11",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "440",
+    "Latitude": 52.2181,
+    "Longitude": 21.0142,
+    "OpeningDate": "2018-11-06T00:00:00",
+    "OpeningDateLocal": "2018-11-06T00:00:00"
+  },
+  {
+    "Id": 5,
+    "Name": "Zdrofit Stegny",
+    "FullName": "Zdrofit Stegny",
+    "Address": "Mangalia 4",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "405",
+    "Latitude": 52.1872,
+    "Longitude": 21.0465,
+    "OpeningDate": "2009-11-08T00:00:00",
+    "OpeningDateLocal": "2009-11-08T00:00:00"
+  },
+  {
+    "Id": 45,
+    "Name": "Zdrofit Tarchomin Galeria P\u00f3\u0142nocna",
+    "FullName": "Zdrofit Tarchomin Galeria P\u00f3\u0142nocna",
+    "Address": "\u015awiatowida 17",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "445",
+    "Latitude": 52.3174,
+    "Longitude": 20.9668,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 19,
+    "Name": "Zdrofit Tarchomin \u015awiatowida",
+    "FullName": "Zdrofit Tarchomin \u015awiatowida",
+    "Address": "Trakt Nadwi\u015bla\u0144ski 14",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "419",
+    "Latitude": 52.3191,
+    "Longitude": 20.9629,
+    "OpeningDate": "2018-03-05T00:00:00",
+    "OpeningDateLocal": "2018-03-05T00:00:00"
+  },
+  {
+    "Id": 63,
+    "Name": "Zdrofit Targ\u00f3wek Atrium",
+    "FullName": "Zdrofit Targ\u00f3wek Atrium",
+    "Address": "G\u0142\u0119bocka 15",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "463",
+    "Latitude": 52.3039,
+    "Longitude": 21.0578,
+    "OpeningDate": "2019-08-23T00:00:00",
+    "OpeningDateLocal": "2019-08-23T00:00:00"
+  },
+  {
+    "Id": 18,
+    "Name": "Zdrofit Targ\u00f3wek Galeria Renova",
+    "FullName": "Zdrofit Targ\u00f3wek Galeria Renova",
+    "Address": "Rembieli\u0144ska 20",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "418",
+    "Latitude": 52.29,
+    "Longitude": 21.03,
+    "OpeningDate": "2018-03-03T00:00:00",
+    "OpeningDateLocal": "2018-03-03T00:00:00"
+  },
+  {
+    "Id": 72,
+    "Name": "Zdrofit The Warsaw HUB",
+    "FullName": "Zdrofit Wola The Warsaw HUB",
+    "Address": "Rondo Daszy\u0144skiego 2b",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "471",
+    "Latitude": 52.2286,
+    "Longitude": 20.982,
+    "OpeningDate": "2022-01-03T00:00:00",
+    "OpeningDateLocal": "2022-01-03T00:00:00"
+  },
+  {
+    "Id": 61,
+    "Name": "Zdrofit Ursus Dzieci W-wy",
+    "FullName": "Zdrofit Ursus Dzieci W-wy",
+    "Address": "Dzieci Warszawy 4",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "461",
+    "Latitude": 52.191,
+    "Longitude": 20.9136,
+    "OpeningDate": "2019-06-27T00:00:00",
+    "OpeningDateLocal": "2019-06-27T00:00:00"
+  },
+  {
+    "Id": 52,
+    "Name": "Zdrofit Ursyn\u00f3w Pu\u0142awska",
+    "FullName": "Zdrofit Ursyn\u00f3w Pu\u0142awska",
+    "Address": "Pu\u0142awska 427",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "452",
+    "Latitude": 52.1417,
+    "Longitude": 21.026,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 70,
+    "Name": "Zdrofit Varso",
+    "FullName": "Zdrofit Varso",
+    "Address": "Chmielna 71",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "470",
+    "Latitude": 52.2287,
+    "Longitude": 20.9995,
+    "OpeningDate": "2021-10-01T00:00:00",
+    "OpeningDateLocal": "2021-10-01T00:00:00"
+  },
+  {
+    "Id": 56,
+    "Name": "Zdrofit Wawer CH Ferio",
+    "FullName": "Zdrofit Wawer CH Ferio",
+    "Address": "Szpota\u0144skiego 4",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "456",
+    "Latitude": 52.2062,
+    "Longitude": 21.1686,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 38,
+    "Name": "Zdrofit Wejherowo Wejher Park",
+    "FullName": "Zdrofit Wejherowo Wejher Park",
+    "Address": "I Brygady Pancernej Wojska Polskiego 10",
+    "City": {
+      "Id": "1721123",
+      "Name": "Wejherowo",
+      "Country": "PL"
+    },
+    "ClubNumber": "438",
+    "Latitude": 54.604,
+    "Longitude": 18.2579,
+    "OpeningDate": "2018-08-01T00:00:00",
+    "OpeningDateLocal": "2018-08-01T00:00:00"
+  },
+  {
+    "Id": 58,
+    "Name": "Zdrofit Weso\u0142a Trakt Brzeski",
+    "FullName": "Zdrofit Weso\u0142a Trakt Brzeski",
+    "Address": "Marsza\u0142ka J\u00f3zefa Pi\u0142sudskiego 2",
+    "City": {
+      "Id": "1718339",
+      "Name": "Weso\u0142a",
+      "Country": "PL"
+    },
+    "ClubNumber": "458",
+    "Latitude": 52.2235,
+    "Longitude": 21.2437,
+    "OpeningDate": "2019-04-04T00:00:00",
+    "OpeningDateLocal": "2019-04-04T00:00:00"
+  },
+  {
+    "Id": 11,
+    "Name": "Zdrofit Wilan\u00f3w Rzeczypospolitej",
+    "FullName": "Zdrofit Wilan\u00f3w Rzeczypospolitej",
+    "Address": "Rzeczypospolitej 1",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "411",
+    "Latitude": 52.154,
+    "Longitude": 21.0815,
+    "OpeningDate": "2015-10-30T00:00:00",
+    "OpeningDateLocal": "2015-10-30T00:00:00"
+  },
+  {
+    "Id": 64,
+    "Name": "Zdrofit W\u0142ochy Krakowiak\u00f3w",
+    "FullName": "Zdrofit W\u0142ochy Krakowiak\u00f3w",
+    "Address": "Krakowiak\u00f3w 46",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "464",
+    "Latitude": 52.1894,
+    "Longitude": 20.9467,
+    "OpeningDate": "2019-09-30T00:00:00",
+    "OpeningDateLocal": "2019-09-30T00:00:00"
+  },
+  {
+    "Id": 27,
+    "Name": "Zdrofit W\u0142ochy \u017bwirki i Wigury",
+    "FullName": "Zdrofit W\u0142ochy \u017bwirki i Wigury",
+    "Address": "\u017bwirki i Wigury 16",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "427",
+    "Latitude": 52.1894,
+    "Longitude": 20.9818,
+    "OpeningDate": "2018-06-06T00:00:00",
+    "OpeningDateLocal": "2018-06-06T00:00:00"
+  },
+  {
+    "Id": 28,
+    "Name": "Zdrofit W\u0142oc\u0142awek Wzorcownia",
+    "FullName": "Zdrofit W\u0142oc\u0142awek Wzorcownia",
+    "Address": "Kili\u0144skiego 3",
+    "City": {
+      "Id": "1721121",
+      "Name": "W\u0142oc\u0142awek",
+      "Country": "PL"
+    },
+    "ClubNumber": "428",
+    "Latitude": 52.6547,
+    "Longitude": 19.0617,
+    "OpeningDate": "2018-06-08T00:00:00",
+    "OpeningDateLocal": "2018-06-08T00:00:00"
+  },
+  {
+    "Id": 49,
+    "Name": "Zdrofit Wola CH Wola Park",
+    "FullName": "Zdrofit Wola CH Wola Park",
+    "Address": "G\u00f3rczewska 124",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "449",
+    "Latitude": 52.2421,
+    "Longitude": 20.9304,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 67,
+    "Name": "Zdrofit Wola Jana Kazimierza",
+    "FullName": "Zdrofit Wola Jana Kazimierza",
+    "Address": "Jana Kazimierza 3",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "467",
+    "Latitude": 52.226,
+    "Longitude": 20.9486,
+    "OpeningDate": "2020-09-15T00:00:00",
+    "OpeningDateLocal": "2020-09-15T00:00:00"
+  },
+  {
+    "Id": 62,
+    "Name": "Zdrofit Wola Skierniewicka",
+    "FullName": "Zdrofit Wola Skierniewicka",
+    "Address": "Skierniewicka 16/20",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "462",
+    "Latitude": 52.2309,
+    "Longitude": 20.9693,
+    "OpeningDate": "2019-08-14T00:00:00",
+    "OpeningDateLocal": "2019-08-14T00:00:00"
+  },
+  {
+    "Id": 48,
+    "Name": "Zdrofit Wola Warsaw Spire",
+    "FullName": "Zdrofit Wola Warsaw Spire",
+    "Address": "Plac Europejski 1",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "448",
+    "Latitude": 52.2322,
+    "Longitude": 20.984,
+    "OpeningDate": "2019-03-01T00:00:00",
+    "OpeningDateLocal": "2019-03-01T00:00:00"
+  },
+  {
+    "Id": 3,
+    "Name": "Zdrofit Wola Wolska",
+    "FullName": "Zdrofit Wola Wolska",
+    "Address": "Wolska 71/73",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "403",
+    "Latitude": 52.2325,
+    "Longitude": 20.9634,
+    "OpeningDate": "2008-10-01T00:00:00",
+    "OpeningDateLocal": "2008-10-01T00:00:00"
+  },
+  {
+    "Id": 13,
+    "Name": "Zdrofit Wo\u0142omin",
+    "FullName": "Zdrofit Wo\u0142omin",
+    "Address": "Geodet\u00f3w 2",
+    "City": {
+      "Id": "1721126",
+      "Name": "Wo\u0142omin",
+      "Country": "PL"
+    },
+    "ClubNumber": "413",
+    "Latitude": 52.3578,
+    "Longitude": 21.2544,
+    "OpeningDate": "2016-10-06T00:00:00",
+    "OpeningDateLocal": "2016-10-06T00:00:00"
+  },
+  {
+    "Id": 6,
+    "Name": "Zdrofit \u017boliborz Centrum Olimpijskie",
+    "FullName": "Zdrofit \u017boliborz Centrum Olimpijskie",
+    "Address": "Wybrze\u017ce Gdy\u0144skie 4",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "406",
+    "Latitude": 52.2741,
+    "Longitude": 20.997,
+    "OpeningDate": "2010-12-01T00:00:00",
+    "OpeningDateLocal": "2010-12-01T00:00:00"
+  },
+  {
+    "Id": 16,
+    "Name": "Zdrofit \u017boliborz Szamocka",
+    "FullName": "Zdrofit \u017boliborz Szamocka",
+    "Address": "Szamocka 10c",
+    "City": {
+      "Id": "1722157",
+      "Name": "Warsaw",
+      "Country": "PL"
+    },
+    "ClubNumber": "416",
+    "Latitude": 52.257,
+    "Longitude": 20.9572,
+    "OpeningDate": "2017-07-05T00:00:00",
+    "OpeningDateLocal": "2017-07-05T00:00:00"
+  }
+]
