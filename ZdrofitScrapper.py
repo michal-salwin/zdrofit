@@ -5,7 +5,15 @@ from log.Logger import Logger
 from time import sleep
 from datetime import date
 
-#TODO Zaimplementować wylogowywanie się
+#TODO - Zaimplementować wylogowywanie się
+#TODO - Dokumentację w stylu pytonowym w kodzie zrobić i spróbować wygerować
+#TODO - jakiś refaktoring, wyodrębnić kilka klas, bo zdaje się, że już za dużo dopowiedzialności w jednej. mo
+#       może kjakiś iterface, który byłby wywoływany zamiast metody w klasei zdrofitscrapper?
+#TODO - przerobić tak, aby posługiwać się nazwami klubów a nie odentyfikatorami
+#TODO - cancel booking - nie działa
+#TODO - activity_Table_heeaders na enuma zamienić
+#TODO - testy automatyczne?
+#TODO - jakiś mail, info cokolwiek, jak po X probach nie uda się zaklepać
 
 class ZdrofitScrapper:
 
@@ -113,7 +121,7 @@ class ZdrofitScrapper:
         #except Exception as e:
          #   self.logger.error(e)
              
-    def book_activity(self, club_id, activity_name, weekday, hour, retry_nr=10, seconds_between_retry=5):
+    def book_activity(self, club_id, activity_name, weekday, hour, retry_nr=50, seconds_between_retry=5):
         
         self.logger.info(f"Trying to book {activity_name} at club_id: {club_id}, weekday: {weekday}  hour: {hour}")
         
