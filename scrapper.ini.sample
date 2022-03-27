@@ -1,0 +1,7 @@
+[zdrofit.account.AT]
+email=j.tejkowska@gmail.com
+password=pass
+
+[sendinblue]
+api_key=api_key.here
+email_from=zdrofit.autosubscribe@zdrofit.pl

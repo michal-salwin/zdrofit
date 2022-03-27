@@ -4,6 +4,8 @@ from exceptions.HttpRequestError import HttpRequestError
 from log.Logger import Logger
 from time import sleep
 from datetime import date
+import configparser
+
 
 #TODO - Zaimplementować wylogowywanie się
 #TODO - Dokumentację w stylu pytonowym w kodzie zrobić i spróbować wygerować
@@ -17,13 +19,23 @@ from datetime import date
 
 class ZdrofitScrapper:
 
-    def __init__(self, user_name, password):
+    __conf = None
+
+    @staticmethod
+    def config():
+        if ZdrofitScrapper.__conf is None: 
+            ZdrofitScrapper.__conf = configparser.ConfigParser()
+            ZdrofitScrapper.__conf.read('scrapper.ini')
+        return ZdrofitScrapper.__conf
+
+    def __init__(self, account):
         self.base_url = 'https://zdrofit.perfectgym.pl/'
         self.activity_table = []
         self.logger = Logger()
         self.activity_table_headers = {'id': 0, 'status': 1, 'status_reason': 2, 'name': 3, 'trainer': 4, 'weekday': 5, 'date': 6, 'hour': 7}
-        self.user_name = user_name
-        self.password =  password
+        self.user_name = ZdrofitScrapper.config().get(section=f'zdrofit.account.{account}',option='email')
+        self.password =  ZdrofitScrapper.config().get(section=f'zdrofit.account.{account}',option='password')
+
 
     def __login(self):
         data = {
