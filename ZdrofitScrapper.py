@@ -1,11 +1,10 @@
 import requests
 import json
+from app_config.AppConfig import AppConfig
 from exceptions.HttpRequestError import HttpRequestError
-from log.Logger import Logger
 from time import sleep
 from datetime import date
-import configparser
-
+from log.Logger import Logger
 
 #TODO - Zaimplementować wylogowywanie się
 #TODO - Dokumentację w stylu pytonowym w kodzie zrobić i spróbować wygerować
@@ -19,23 +18,19 @@ import configparser
 
 class ZdrofitScrapper:
 
-    __conf = None
+    config = None
+    logger = None
+    email = None
+    base_url = 'https://zdrofit.perfectgym.pl/'
+    activity_table = []
+    activity_table_headers = {'id': 0, 'status': 1, 'status_reason': 2, 'name': 3, 'trainer': 4, 'weekday': 5, 'date': 6, 'hour': 7}
+    
 
-    @staticmethod
-    def config():
-        if ZdrofitScrapper.__conf is None: 
-            ZdrofitScrapper.__conf = configparser.ConfigParser()
-            ZdrofitScrapper.__conf.read('scrapper.ini')
-        return ZdrofitScrapper.__conf
-
-    def __init__(self, account):
-        self.base_url = 'https://zdrofit.perfectgym.pl/'
-        self.activity_table = []
-        self.logger = Logger()
-        self.activity_table_headers = {'id': 0, 'status': 1, 'status_reason': 2, 'name': 3, 'trainer': 4, 'weekday': 5, 'date': 6, 'hour': 7}
-        self.user_name = ZdrofitScrapper.config().get(section=f'zdrofit.account.{account}',option='email')
-        self.password =  ZdrofitScrapper.config().get(section=f'zdrofit.account.{account}',option='password')
-
+    def __init__(self, account: str, app_config: AppConfig, logger: Logger):
+        self.logger = logger
+        self.app_config = app_config
+        self.user_name = self.app_config.get_account_param(account,'email')
+        self.password =  self.app_config.get_account_param(account,'password')
 
     def __login(self):
         data = {
@@ -106,7 +101,6 @@ class ZdrofitScrapper:
     def __filter_activity_table_by_hour(self,hour):
         self.activity_table = [x for x in self.activity_table if x[self.activity_table_headers['hour']] == hour]
 
-
     def __write_file(self,file_name,content):
         f = open(file_name, "w")
         f.write(content)
@@ -130,8 +124,6 @@ class ZdrofitScrapper:
             self.__print_activity_table()
         except HttpRequestError as e:
             self.logger.error(e.message)
-        #except Exception as e:
-         #   self.logger.error(e)
              
     def book_activity(self, club_id, activity_name, weekday, hour, retry_nr=50, seconds_between_retry=5):
         
@@ -208,7 +200,7 @@ class ZdrofitScrapper:
 
         self.cookies = response.cookies
 
-    def __cancel_booking(self,class_id, retry=10):
+    def __cancel_booking(self,class_id):
         data = {
             "classId": class_id
         }
@@ -220,3 +212,4 @@ class ZdrofitScrapper:
 
         self.cookies = response.cookies
 
+ 
