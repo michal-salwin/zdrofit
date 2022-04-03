@@ -4,17 +4,19 @@ from app_config.AppConfig import AppConfig
 from exceptions.HttpRequestError import HttpRequestError
 from time import sleep
 from datetime import date
-from log.Logger import Logger
+from app_logger.AppLogger import AppLogger
+from Activity import Activity
 
 #TODO - Zaimplementować wylogowywanie się
 #TODO - Dokumentację w stylu pytonowym w kodzie zrobić i spróbować wygerować
 #TODO - jakiś refaktoring, wyodrębnić kilka klas, bo zdaje się, że już za dużo dopowiedzialności w jednej. mo
-#       może kjakiś iterface, który byłby wywoływany zamiast metody w klasei zdrofitscrapper?
-#TODO - przerobić tak, aby posługiwać się nazwami klubów a nie odentyfikatorami
+#       może jakiś iterface, który byłby wywoływany zamiast metody w klasie zdrofitscrapper?
 #TODO - cancel booking - nie działa
-#TODO - activity_Table_heeaders na enuma zamienić
 #TODO - testy automatyczne?
 #TODO - jakiś mail, info cokolwiek, jak po X probach nie uda się zaklepać
+#TODO - adresy usług do ini przenieść
+#TODO - wywołanie skryptów - zrobić jeden a parametry przekazywać podczas wywołania z lini poleceń w crontab
+#TODO - po zabukowaniu sprawdzać, czy activity występuje w kalendarzu 
 
 class ZdrofitScrapper:
 
@@ -22,11 +24,14 @@ class ZdrofitScrapper:
     logger = None
     email = None
     base_url = 'https://zdrofit.perfectgym.pl/'
-    activity_table = []
-    activity_table_headers = {'id': 0, 'status': 1, 'status_reason': 2, 'name': 3, 'trainer': 4, 'weekday': 5, 'date': 6, 'hour': 7}
-    
+    activity_table = [Activity]
+    clubs = {
+        'gdansk-przymorze': 33,
+        'gdansk-manhattan': 32,
+        'gdynia-chwarzno': 43
+    }
 
-    def __init__(self, account: str, app_config: AppConfig, logger: Logger):
+    def __init__(self, account: str, app_config: AppConfig, logger: AppLogger):
         self.logger = logger
         self.app_config = app_config
         self.user_name = self.app_config.get_account_param(account,'email')
@@ -68,48 +73,51 @@ class ZdrofitScrapper:
                 for days in hours['ClassesPerDay']:
                     item = []
                     for activity in days:
-                        self.activity_table.append([
-                            activity['Id'],
-                            activity['Status'],
-                            str(activity['StatusReason']),
-                            activity['Name'],
-                            activity['Trainer'],
-                            date.fromisoformat(str(activity['StartTime'][:10])).strftime('%A'),
-                            activity['StartTime'][:10],
-                            activity['StartTime'][11:16]
-                        ])                        
+                        a = Activity()
+                        a.id = activity['Id']
+                        a.status = activity['Status']
+                        a.status_reason = activity['StatusReason']
+                        a.name = activity['Name']
+                        a.trainer = activity['Trainer']
+                        a.weekday = date.fromisoformat(str(activity['StartTime'][:10])).strftime('%A')
+                        a.date = activity['StartTime'][:10]
+                        a.hour = activity['StartTime'][11:16]
+
+                        self.activity_table.append(a)     
  
     def __sort_activity_table(self):
         #sort by date, time
-        self.activity_table = sorted(self.activity_table,key=lambda x:(x[self.activity_table_headers['date']], x[self.activity_table_headers['hour']]))
+        self.activity_table = sorted(self.activity_table,key=lambda x:(x.date, x.hour))
     
     def __print_activity_table(self):
         for item in list(self.activity_table):
-            print ("{:<7} {:<15} {:<20} {:<30} {:<30} {:<13} {:<13} {:<13}".format(*item))
+            
+            item.print_line()
         if len(self.activity_table) == 0:
             print ("Activity list is empty.")
 
     def __filter_activity_table_by_activity(self, activity_list):
-        self.activity_table = [x for x in self.activity_table if x[self.activity_table_headers['name']] in activity_list]
+        self.activity_table = [x for x in self.activity_table if x.name in activity_list]
 
     def __filter_activity_table_by_status(self,status):
-        self.activity_table = [x for x in self.activity_table if x[self.activity_table_headers['status']] == status]
+        self.activity_table = [x for x in self.activity_table if x.status == status]
 
     def __filter_activity_table_by_weekday(self,weekday):
-        self.activity_table = [x for x in self.activity_table if x[self.activity_table_headers['weekday']] == weekday]
+        self.activity_table = [x for x in self.activity_table if x.weekday == weekday]
 
     def __filter_activity_table_by_hour(self,hour):
-        self.activity_table = [x for x in self.activity_table if x[self.activity_table_headers['hour']] == hour]
+        self.activity_table = [x for x in self.activity_table if x.hour == hour]
 
     def __write_file(self,file_name,content):
         f = open(file_name, "w")
         f.write(content)
         f.close()     
 
-    def get_activities(self, club_id,activity_list=None, weekday=None, hour=None ,bookable_only=False):
+    def get_activities(self, club_name, activity_list=None, weekday=None, hour=None ,bookable_only=False):
         
         try:
             self.__login()
+            club_id = self.clubs[club_name]
             self.__get_weekly_classes(club_id)
             if activity_list != None:
                 self.__filter_activity_table_by_activity(activity_list)
@@ -125,12 +133,13 @@ class ZdrofitScrapper:
         except HttpRequestError as e:
             self.logger.error(e.message)
              
-    def book_activity(self, club_id, activity_name, weekday, hour, retry_nr=50, seconds_between_retry=5):
+    def book_activity(self, club_name, activity_name, weekday, hour, retry_nr=50, seconds_between_retry=5):
         
-        self.logger.info(f"Trying to book {activity_name} at club_id: {club_id}, weekday: {weekday}  hour: {hour}")
+        self.logger.info(f"Trying to book {activity_name} at club: {club_name}, weekday: {weekday}  hour: {hour}")
         
         try:
             self.__login()
+            club_id = self.clubs[club_name]
             self.__get_weekly_classes(club_id)
         except HttpRequestError as e:
             self.logger.error(e.message)
@@ -148,17 +157,12 @@ class ZdrofitScrapper:
             self.logger.info(f"Requested activity not found in callendar")
             return
         
-        #TODO wypisywanie aktywności w logu zamienić na funkcję
-        self.logger.info(
-                f"Found Activity {activity_name}, "
-                f"status: {self.activity_table[0][self.activity_table_headers['status']]}({self.activity_table[0][self.activity_table_headers['status_reason']]}), "
-                f"starting at {self.activity_table[0][self.activity_table_headers['date']]} {self.activity_table[0][self.activity_table_headers['hour']]}")
-
+        self.logger.info(self.activity_table[0].get_log_found_message())
         request_nr = 1
         while request_nr <= retry_nr:
             
             try:
-                self.__book_class(self.activity_table[0][0])
+                self.__book_class(self.activity_table[0].id)
                 self.logger.info(f"Activity {activity_name} booked successfully")
                 break
             except HttpRequestError as e:

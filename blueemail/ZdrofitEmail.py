@@ -1,14 +1,14 @@
 from blueemail.BlueEmail import BlueEmail, HtmlMessage
 from app_config.AppConfig import AppConfig
-from log.Logger import Logger
-
+from app_logger.AppLogger import AppLogger
+from utils.RandomFileLineReader import RandomFileLineReader
 
 class ZdrofitEmail:
 
     def __init__(self, account: str):
 
-        self.config = AppConfig('scrapper.ini')
-        self.logger = Logger('scrapper.log')
+        self.config = AppConfig()
+        self.logger = AppLogger()
         self.email = BlueEmail(self.config.get(section='sendinblue', option='api_key'),self.logger)
         self.account = account
 

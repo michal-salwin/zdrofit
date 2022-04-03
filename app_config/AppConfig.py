@@ -1,10 +1,14 @@
 import configparser
 
-class AppConfig:
-   
-    def __init__(self, config_file: str):
+class AppConfig (object):
+    def __new__(cls):
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(AppConfig, cls).__new__(cls)
+        return cls.instance
+
+    def __init__(self):
         self.__conf = configparser.ConfigParser()
-        self.__conf.read(config_file)
+        self.__conf.read('scrapper.ini')
     
     def get(self, section: str, option: str):
         return self.__conf.get(section=section,option=option)

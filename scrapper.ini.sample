@@ -2,7 +2,16 @@
 name=Asia Tejkowska
 email=j.tejkowska@gmail.com
 password=pass
+[zdrofit.account.MS]
+name=Michał Salwin
+email=michal.salwin@gmail.com
+password=pass
 
 [sendinblue]
-api_key=api_key.here
-email_from=zdrofit.autosubscribe@zdrofit.pl
+api_key=key
+from_email=zdrofit.autosubscribe@zdrofit.pl
+from_name=Zdrofit
+cc_email=michal.salwin@gmail.com
+cc_name=Michał Salwin
+
+

@@ -2,12 +2,12 @@ from asyncio.log import logger
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 from blueemail.HtmlMessage import HtmlMessage
-from log.Logger import Logger
+from app_logger.AppLogger import AppLogger
 
 class BlueEmail:
     api_instance = None
 
-    def __init__(self,api_key: str, logger: Logger):
+    def __init__(self,api_key: str, logger: AppLogger):
         configuration = sib_api_v3_sdk.Configuration()
         configuration.api_key['api-key'] = api_key
         self.api_instance = sib_api_v3_sdk.TransactionalEmailsApi(sib_api_v3_sdk.ApiClient(configuration))
