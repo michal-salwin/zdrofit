@@ -1,5 +1,5 @@
 30 17 * * SAT cd zdrofit && python3 book_activity.py -i AT -c gdansk-przymorze -a Sztangi             -w Monday     -s 17:30
-30 17 * * SAT cd zdrofit && python3 book_activity.py -i AT -c gdansk-przymorze -a Interwał            -w Monday     -s 18:30
+30 18 * * SAT cd zdrofit && python3 book_activity.py -i AT -c gdansk-przymorze -a Interwał            -w Monday     -s 18:30
 30 17 * * MON cd zdrofit && python3 book_activity.py -i AT -c gdansk-manhattan -a Interwał            -w Wednesday  -s 17:30
 30 17 * * WED cd zdrofit && python3 book_activity.py -i AT -c gdansk-przymorze -a "Trening Obwodowy"  -w Friday     -s 17:30
 00 09 * * THU cd zdrofit && python3 book_activity.py -i AT -c gdansk-przymorze -a "Full Body Workout" -w Saturday   -s 09:00
