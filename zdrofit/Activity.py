@@ -11,8 +11,11 @@ class Activity:
     date:           datetime = None
     hour:           str = None
 
-    def print_line(self):
-        print ('{:<7} {:<15} {:<20} {:<30} {:<30} {:<13} {:<13} {:<13}'.
+    def __init__(self):
+        pass
+
+    def __str__(self):
+         return str('{:<7} {:<15} {:<20} {:<30} {:<30} {:<13} {:<13} {:<13}'.
             format(self.id, 
                    self.status, 
                    str(self.status_reason), 
@@ -22,7 +25,7 @@ class Activity:
                    self.date, 
                    self.hour
             )
-        )
-    
+    )
+
     def get_log_found_message(self) -> str:
         return f"Found Activity {self.name}, status: {self.status} starting at {self.weekday}, {self.date} {self.hour}"

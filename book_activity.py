@@ -1,4 +1,4 @@
-from ZdrofitScrapper import ZdrofitScrapper
+from zdrofit.Booker import Booker
 from app_logger.AppLogger import AppLogger
 from app_config.AppConfig import AppConfig
 import argparse
@@ -14,7 +14,7 @@ args = vars(ap.parse_args())
 
 logger = AppLogger()
 config = AppConfig()
-scrapper = ZdrofitScrapper(args['initials'], config, logger)
+booker = Booker(args['initials'], config, logger)
 
-scrapper.book_activity(args['club_name'],args['activity'],weekday=args['weekday'], hour=args['start_hour'])
+booker.book_activity(args['club_name'],args['activity'],weekday=args['weekday'], hour=args['start_hour'])
 

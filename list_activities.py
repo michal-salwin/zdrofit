@@ -1,7 +1,8 @@
-from ZdrofitScrapper import ZdrofitScrapper
 from app_logger.AppLogger import AppLogger
 from app_config.AppConfig import AppConfig
 import argparse
+
+from zdrofit.Booker import Booker
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--initials",     required=True, help="Athlete initials - first letters of name and surname")
@@ -11,6 +12,6 @@ args = vars(ap.parse_args())
 
 logger = AppLogger()
 config = AppConfig()
-scrapper = ZdrofitScrapper(args['initials'], config, logger)
-scrapper.get_activities(args['club_name'])
+booker = Booker(args['initials'], config, logger)
+booker.get_activities(args['club_name'])
 

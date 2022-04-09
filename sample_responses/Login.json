@@ -1,0 +1,26 @@
+{
+    "User":    {
+       "Member":       {
+          "Id": 543104,
+          "FirstName": "Klubowicz",
+          "LastName": "Benefit",
+          "Email": "michal.salwin@gmail.com",
+          "PhotoUrl": null,
+          "HomeClubId": 43,
+          "DefaultClubId": 43,
+          "Type": "Guest",
+          "IsGuest": true,
+          "IsFamilyChild": false,
+          "NotificationsData":          {
+             "CanUpdateFromTrial": true,
+             "HasInvalidContractPaymentMethod": false,
+             "HasFingerprintAssigned": false,
+             "RemainingDeposit": 0,
+             "ContractStatus": null
+          }
+       },
+       "Employee": null,
+       "Roles": ["Member"]
+    },
+    "State": "Classes"
+ }
