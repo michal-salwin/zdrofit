@@ -26,6 +26,8 @@ class ActivityList:
                         a.weekday = date.fromisoformat(str(activity['StartTime'][:10])).strftime('%A')
                         a.date = activity['StartTime'][:10]
                         a.hour = activity['StartTime'][11:16]
+                        a.limit = activity['BookingIndicator']['Limit']
+                        a.available = activity['BookingIndicator']['Available']
 
                         self.activity_list.append(a)
  
@@ -35,7 +37,6 @@ class ActivityList:
     
     def print(self):
         for item in list(self.activity_list):
-            #item.print_line()
             print(item)
         if len(self.activity_list) == 0:
             print ("Activity list is empty.")
@@ -51,6 +52,9 @@ class ActivityList:
 
     def filter_by_hour(self,hour):
         self.activity_list = [x for x in self.activity_list if x.hour == hour]
+
+    def filter_by_id(self,id):
+        self.activity_list = [x for x in self.activity_list if x.id == id]
 
     def get_first_activity(self):
         return self.activity_list[0]

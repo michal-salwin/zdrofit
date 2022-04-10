@@ -8,4 +8,6 @@ class HtmlMessage:
     subject: str = None
     content_html: str = None
 
+    def __str__(self):
+        return f'Email to: {self.to_email}, subject: {self.subject}'
 

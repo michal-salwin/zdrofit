@@ -1,22 +1,23 @@
+from blueemail.ZdrofitEmail import ZdrofitEmail
 from rest.BaseRequest import BaseRequest
-
+from blueemail.BlueEmail import BlueEmail,HtmlMessage
 from app_config.AppConfig import AppConfig
 from exceptions.HttpRequestError import HttpRequestError
+from exceptions.SendInBlueEmailException import SendInBlueEmailException
 from time import sleep
 from app_logger.AppLogger import AppLogger
+from zdrofit.Activity import Activity
 from zdrofit.ActivityList import ActivityList
 
 #TODO - Zaimplementować wylogowywanie się
 #TODO - Dokumentację w stylu pytonowym w kodzie zrobić i spróbować wygerować
-#TODO - jakiś refaktoring, wyodrębnić kilka klas, bo zdaje się, że już za dużo dopowiedzialności w jednej. mo
-#       może jakiś iterface, który byłby wywoływany zamiast metody w klasie Scrapper?
 #TODO - cancel booking - nie działa
 #TODO - testy automatyczne?
 #TODO - jakiś mail, info cokolwiek, jak po X probach nie uda się zaklepać
 #TODO - adresy usług do ini przenieść
-#TODO - wywołanie skryptów - zrobić jeden a parametry przekazywać podczas wywołania z lini poleceń w crontab
 #TODO - po zabukowaniu sprawdzać, czy activity występuje w kalendarzu 
-
+#       info o detalach treningu jest tu: Request URL: https://zdrofit.perfectgym.pl/ClientPortal2/Classes/ClassCalendar/Details?classId=148130 (get)
+#       można stamtąd dobrać opis treningu i jeszcze kilka innych ciekawych informacji
 class Booker:
 
     config = None
@@ -36,6 +37,7 @@ class Booker:
         self.user_name = self.app_config.get_account_param(account,'email')
         self.password =  self.app_config.get_account_param(account,'password')
         self.request = BaseRequest()
+        self.email = ZdrofitEmail(account)
 
     def __login(self):
         data = {
@@ -118,6 +120,7 @@ class Booker:
             
             try:
                 self.__book_class(activity.id)
+                self.email.send_on_successful_booking(activity)
                 self.logger.info(f"Activity {activity_name} booked successfully")
                 break
             except HttpRequestError as e:
@@ -189,3 +192,4 @@ class Booker:
         response = self.request.post(uri, data=data)
         if response.status_code != 200:
             raise HttpRequestError(uri, response.status_code, response.reason, response.content)
+

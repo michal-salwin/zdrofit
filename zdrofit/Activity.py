@@ -10,22 +10,30 @@ class Activity:
     weekday:        str = None
     date:           datetime = None
     hour:           str = None
+    limit:          int = None
+    available:      int = None
 
     def __init__(self):
         pass
 
+    def xstr(self, s):
+        if s is None:
+            return ''
+        return str(s)
+
     def __str__(self):
-         return str('{:<7} {:<15} {:<20} {:<30} {:<30} {:<13} {:<13} {:<13}'.
+         return str('{:<7} {:<15} {:<20} {:<30} {:<23} {:<13} {:<13} {:<5} {:>7}'.
             format(self.id, 
                    self.status, 
-                   str(self.status_reason), 
+                   self.xstr(self.status_reason), 
                    self.name,
                    self.trainer, 
                    self.weekday, 
                    self.date, 
-                   self.hour
+                   self.hour,
+                   str(f'{self.available}/{self.limit}')
             )
     )
 
     def get_log_found_message(self) -> str:
-        return f"Found Activity {self.name}, status: {self.status} starting at {self.weekday}, {self.date} {self.hour}"
+        return f"Found Activity {self.name}, status: {self.status} starting at {self.weekday}, {self.date} {self.hour}, availability: {self.available}/{self.limit}"
