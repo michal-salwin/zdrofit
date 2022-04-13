@@ -12,6 +12,7 @@ class Activity:
     hour:           str = None
     limit:          int = None
     available:      int = None
+    club_name:      str = None
 
     def __init__(self):
         pass

@@ -1,3 +1,4 @@
+from zdrofit.Activity import Activity
 from zdrofit.Booker import Booker
 from app_logger.AppLogger import AppLogger
 from app_config.AppConfig import AppConfig
@@ -14,7 +15,13 @@ args = vars(ap.parse_args())
 
 logger = AppLogger()
 config = AppConfig()
-booker = Booker(args['initials'], config, logger)
+activity = Activity()
 
-booker.book_activity(args['club_name'],args['activity'],weekday=args['weekday'], hour=args['start_hour'])
+activity.club_name = args['club_name']
+activity.name = args['activity']
+activity.weekday = args['weekday']
+activity.hour = args['start_hour']
+
+booker = Booker(args['initials'], config, logger)
+booker.book_activity(activity)
 
