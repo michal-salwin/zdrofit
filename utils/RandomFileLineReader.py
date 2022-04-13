@@ -16,5 +16,5 @@ class RandomFileLineReader:
             return line
 
 r = RandomFileLineReader()
-line = r.read_line('afile.txt')
+line = r.read_line('file.txt')
 print(line)
