@@ -3,6 +3,7 @@ from app_config.AppConfig import AppConfig
 import argparse
 
 from zdrofit.Booker import Booker
+from zdrofit.Club import Club
 from zdrofit.User import User
 
 ap = argparse.ArgumentParser()
@@ -13,8 +14,9 @@ args = vars(ap.parse_args())
 
 logger = AppLogger()
 config = AppConfig()
+club = Club(args['club_name'])
 user = User(args['initials'], config)
 
 booker = Booker(user, logger)
-booker.get_activities(args['club_name'])
+booker.get_activities(club)
 

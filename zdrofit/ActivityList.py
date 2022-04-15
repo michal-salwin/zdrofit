@@ -2,14 +2,16 @@ from zdrofit.Activity import Activity
 import json
 from datetime import date
 
+from zdrofit.Club import Club
+
 class ActivityList:
 
     activity_list: list[Activity] = []
 
-    def __init__(self,activity_list_json: str, club_name: str):
-        self.build_activity_list(activity_list_json, club_name)
+    def __init__(self,activity_list_json: str, club: Club):
+        self.build_activity_list(activity_list_json, club)
 
-    def build_activity_list(self,activity_list_json: str, club_name: str):
+    def build_activity_list(self,activity_list_json: str, club: Club):
 
         json_data = json.loads(activity_list_json)
 
@@ -28,8 +30,7 @@ class ActivityList:
                         a.hour = activity['StartTime'][11:16]
                         a.limit = activity['BookingIndicator']['Limit']
                         a.available = activity['BookingIndicator']['Available']
-                        a.club_name = club_name
-
+                        a.club = club
                         self.activity_list.append(a)
  
     def sort(self):

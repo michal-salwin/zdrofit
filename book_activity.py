@@ -4,6 +4,7 @@ from app_logger.AppLogger import AppLogger
 from app_config.AppConfig import AppConfig
 
 import argparse
+from zdrofit.Club import Club
 
 from zdrofit.User import User
 
@@ -21,7 +22,7 @@ config = AppConfig()
 activity = Activity()
 user = User(args['initials'], config)
 
-activity.club_name = args['club_name']
+activity.club = Club(args['club_name'])
 activity.name = args['activity']
 activity.weekday = args['weekday']
 activity.hour = args['start_hour']

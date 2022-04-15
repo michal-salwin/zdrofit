@@ -1,4 +1,5 @@
 from datetime import datetime
+from zdrofit.Club import Club
 
 
 class Activity:
@@ -12,7 +13,7 @@ class Activity:
     hour:           str = None
     limit:          int = None
     available:      int = None
-    club_name:      str = None
+    club:           Club = None
 
     def __init__(self):
         pass
@@ -23,7 +24,7 @@ class Activity:
         return str(s)
 
     def __str__(self):
-         return str('{:<7} {:<15} {:<20} {:<30} {:<23} {:<13} {:<13} {:<5} {:>7}'.
+         return str('{:<7} {:<15} {:<20} {:<30} {:<23} {:<13} {:<13} {:<7} {:18} {:>7}'.
             format(self.id, 
                    self.status, 
                    self.xstr(self.status_reason), 
@@ -32,6 +33,7 @@ class Activity:
                    self.weekday, 
                    self.date, 
                    self.hour,
+                   self.club.get_name(),
                    str(f'{self.available}/{self.limit}')
             )
     )

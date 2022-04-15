@@ -1,4 +1,3 @@
-from tkinter.messagebox import NO
 from app_config.AppConfig import AppConfig
 
 class User:

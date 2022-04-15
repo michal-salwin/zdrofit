@@ -5,6 +5,7 @@ from time import sleep
 from app_logger.AppLogger import AppLogger
 from zdrofit.Activity import Activity
 from zdrofit.ActivityList import ActivityList
+from zdrofit.Club import Club
 from zdrofit.User import User
 class Booker:
 
@@ -12,12 +13,6 @@ class Booker:
     logger = None
     user = None
     request: BaseRequest
-
-    clubs = {
-        'gdansk-przymorze': 33,
-        'gdansk-manhattan': 32,
-        'gdynia-chwarzno': 43
-    }
 
     def __init__(self, user: User, logger: AppLogger):
         self.logger = logger
@@ -41,9 +36,9 @@ class Booker:
 
         self.logger.info(f'{self.user.get_email()} has successfully logged in')
 
-    def get_weekly_classes(self, club_name) -> ActivityList:
+    def get_weekly_classes(self, club: Club) -> ActivityList:
         data = {
-            "clubId": self.clubs[club_name],
+            "clubId": club.get_id(),
             "categoryId": 'null',
             "daysInWeek": '7'
         }
@@ -52,14 +47,14 @@ class Booker:
         if response.status_code != 200:
             raise HttpRequestError(uri, response.status_code, response.reason, response.content)
  
-        return ActivityList(response.text, club_name)
+        return ActivityList(response.text, club)
 
  
-    def get_activities(self, club_name, activities=None, weekday=None, hour=None ,bookable_only=False):
+    def get_activities(self, club: Club, activities=None, weekday=None, hour=None ,bookable_only=False):
         
         try:
             self.__login()
-            activity_list = self.get_weekly_classes(club_name)
+            activity_list = self.get_weekly_classes(club)
             if activities != None:
                 activity_list.filter_by_activity(activities)
             if bookable_only:
@@ -77,11 +72,11 @@ class Booker:
              
     def book_activity(self, activity: Activity, nr_of_retries=50, seconds_between_retry=5):
         
-        self.logger.info(f"Trying to book {activity.name} at club: {activity.club_name}, weekday: {activity.weekday}  hour: {activity.hour}")
+        self.logger.info(f"Trying to book {activity.name} at club: {activity.club.get_name()}, weekday: {activity.weekday}  hour: {activity.hour}")
         
         try:
             self.__login()
-            activity_list = self.get_weekly_classes(activity.club_name)
+            activity_list = self.get_weekly_classes(activity.club)
         except HttpRequestError as e:
             self.logger.error(e.message)
             return
@@ -121,13 +116,13 @@ class Booker:
         
         self.email.send_on_max_retry_exceeded(activity, nr_of_retries)
 
-    def cancel_booking(self, club_name, activity_name, weekday, hour):
+    def cancel_booking(self, activity: Activity, weekday, hour):
         
-        self.logger.info(f"Trying to cancel booking {activity_name} at club: {club_name}, weekday: {weekday}  hour: {hour}")
+        self.logger.info(f"Trying to cancel booking {activity.name} at club: {activity.club.get_name()}, weekday: {weekday}  hour: {hour}")
         
         try:
             self.__login()
-            activity_list = self.get_weekly_classes(club_name)
+            activity_list = self.get_weekly_classes(activity.club)
         except HttpRequestError as e:
             self.logger.error(e.message)
             return
@@ -135,7 +130,7 @@ class Booker:
             self.logger.error(e)
             return
 
-        activity_list.filter_by_activity((activity_name))
+        activity_list.filter_by_activity((activity.name))
         activity_list.filter_by_weekday((weekday))
         activity_list.filter_by_hour((hour))
         activity_list.filter_by_status('Booked')
@@ -156,7 +151,7 @@ class Booker:
             self.logger.error(e)
             return   
         
-        self.logger.info(f"Activity {activity_name} booking cancelled successfully")
+        self.logger.info(f"Activity {activity.name} booking cancelled successfully")
 
 
     def __book_class(self,class_id):
