@@ -1,4 +1,8 @@
-from blueemail.ZdrofitEmail import ZdrofitEmail
+from blueemail.ZdrofitEmailActivityNotFound import ZdrofitEmailActivityNotFound
+from blueemail.ZdrofitEmailMaxRetryExceeded import ZdrofitEmailMaxRetryExceeded
+from blueemail.ZdrofitEmailSender import ZdrofitEmailSender
+from blueemail.ZdrofitEmailSuccess import ZdrofitEmailSuccess
+
 from rest.BaseRequest import BaseRequest
 from exceptions.HttpRequestError import HttpRequestError
 from time import sleep
@@ -12,6 +16,7 @@ class Booker:
     config = None
     logger = None
     user = None
+    email_sender: ZdrofitEmailSender
     request: BaseRequest
 
     def __init__(self, user: User, logger: AppLogger):
@@ -19,7 +24,7 @@ class Booker:
         self.user = user
 
         self.request = BaseRequest()
-        self.email = ZdrofitEmail(user)
+        self.email_sender = ZdrofitEmailSender()
 
     def __login(self):
         data = {
@@ -91,7 +96,7 @@ class Booker:
 
         if activity_list.get_activity_count() == 0:
             self.logger.info(f"Requested activity not found in callendar")
-            self.email.send_on_activity_not_found(activity)
+            self.email_sender.send(ZdrofitEmailActivityNotFound(self.user,activity).get_message())
             return
         
         activity = activity_list.get_first_activity()
@@ -101,7 +106,7 @@ class Booker:
             
             try:
                 self.__book_class(activity.id)
-                self.email.send_on_successful_booking(activity)
+                self.email_sender.send(ZdrofitEmailSuccess(self.user,activity).get_message())
                 self.logger.info(f"Activity {activity.name} booked successfully")
                 return
             except HttpRequestError as e:
@@ -114,7 +119,7 @@ class Booker:
                 request_nr = request_nr + 1
                 sleep(seconds_between_retry)
         
-        self.email.send_on_max_retry_exceeded(activity, nr_of_retries)
+        self.email_sender.send(ZdrofitEmailMaxRetryExceeded(self.user,activity).get_message())
 
     def cancel_booking(self, activity: Activity, weekday, hour):
         
