@@ -3,6 +3,7 @@ from blueemail.HtmlMessage import HtmlMessage
 from app_config.AppConfig import AppConfig
 from app_logger.AppLogger import AppLogger
 from exceptions.SendInBlueEmailException import SendInBlueEmailException
+from utils.Weekday import Weekday
 from zdrofit.Activity import Activity
 from zdrofit.User import User
 
@@ -32,7 +33,8 @@ class ZdrofitEmail:
         text = (
                 '<html><body>'
                 '<h3>Zdrofit automatyczna rejestracja</h3>'
-                f'<p>Zapis na zajęcja <b>{activity.name}</b> do klubu <b>{activity.club_name}</b> w dniu <b>{activity.date} ({activity.weekday})</b>, godz. <b>{activity.hour}</b> zakończył się pomyślnie.<br/>'
+                f'<p>{self.user.get_first_name_vocative()},</p>'
+                f'<p>Zapis na zajęcja <b>{activity.name}</b> odbywające się <b>{Weekday.name_pl_acc(activity.weekday)}</b> o godz. <b>{activity.hour}</b> w klubie <b>{activity.club_name}</b> zakończył się pomyślnie.<br/>'
                 f'Pozycja na liście: <b>{activity.limit - activity.available + 1}</b>, liczba miejsc na zajęciach: <b>{activity.limit}</b></p>'
                 '<p>Przybywaj i daj z siebie wszystko! :-)'
                 '</body></html>'
@@ -49,9 +51,10 @@ class ZdrofitEmail:
         message.subject = 'Zdrofit -automatyczna rejestracja - błąd rejestracji'
         text = (
                 '<html><body>'
-                '<h3>Zdrofit automatyczna rejestracja - problemik :(</h3>'
-                f'<p>Zapis na zajęcja <b>{activity.name}</b> do klubu <b>{activity.club_name}</b>, dzień tygodnia: <b>{activity.weekday}</b>, godz. <b>{activity.hour}</b> nie powiódł się.<br/>'
-                 f'Zajęcia nie występują w grafiku zajęć. Prawdopodobnie zostały odwołane ... :-(</p>'
+                '<h3>Zdrofit automatyczna rejestracja - problemik</h3>'
+                f'<p>{self.user.get_first_name_vocative()},</p>'
+                f'<p>Zapis na zajęcja <b>{activity.name}</b> odbywające się <b>{Weekday.name_pl_acc(activity.weekday)}</b> o godz. <b>{activity.hour}</b> w klubie <b>{activity.club_name}</b> nie powiódł się.</p>'
+                 f'<p>Zajęcia nie występują w grafiku zajęć. Prawdopodobnie zostały odwołane ... </p>'
                 '</body></html>'
         )
         message.content_html = text
@@ -69,7 +72,8 @@ class ZdrofitEmail:
         text = (
                 '<html><body>'
                 '<h3>Zdrofit automatyczna rejestracja - problemik :(</h3>'
-                f'<p>Zapis na zajęcja <b>{activity.name}</b> do klubu <b>{activity.club_name}</b>, dzień tygodnia: <b>{activity.weekday}</b>, godz. <b>{activity.hour}</b> nie powiódł się.<br/>'
+                f'<p>{self.user.get_first_name_vocative()},</p>'
+                f'<p>Zapis na zajęcja <b>{activity.name}</b> odbywające się <b>{Weekday.name_pl_acc(activity.weekday)}</b> o godz. <b>{activity.hour}</b> w klubie <b>{activity.club_name}</b> nie powiódł się.<br/>'
                 f'Wykonano {nr_of_retries} prób rejestracji, żadna z nich nie zakończyła się pomyślnie :-(</p>'
                 '<p>Spróbuj ręcznego zapisu - może jeszcze się uda, zanim zabraknie miejsc ... </p>'
                 '</body></html>'

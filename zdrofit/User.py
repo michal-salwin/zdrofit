@@ -1,3 +1,4 @@
+from tkinter.messagebox import NO
 from app_config.AppConfig import AppConfig
 
 class User:
@@ -6,6 +7,7 @@ class User:
     __surname:        str = None
     __email:          str = None
     __password:       str = None
+    __first_name_voc: str = None
  
     def __init__(self,initials, config: AppConfig):
         self.__initials = initials
@@ -13,6 +15,7 @@ class User:
         self.__surname =        config.get_account_param(initials,'surname')
         self.__email =          config.get_account_param(initials,'email')
         self.__password =       config.get_account_param(initials,'password')
+        self.__first_name_voc=  config.get_account_param(initials,'first_name_vocative')  
 
     def __str__(self):
          return str('{:<4} {:<12} {:<15}'.
@@ -24,6 +27,9 @@ class User:
 
     def get_first_name(self) -> str:
         return self.__first_name
+
+    def get_first_name_vocative(self) -> str:
+        return self.__first_name_voc
 
     def get_surname(self) -> str:
         return self.__surnamee
