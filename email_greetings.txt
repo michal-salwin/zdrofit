@@ -1,3 +1,0 @@
-Hi! Ready for exercises? {activity_name} on {weekday} at {hour} has been successfully booked for you. Get ready!
-Hello, how are you? {activity_name} is waiting for your partcipation on {weekday} at {hour}. Don't be late!
-Hello athlete :) Get ready for {activity_name} on {weekday} at {hour}. Do your best!

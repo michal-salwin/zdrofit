@@ -22,8 +22,8 @@ activity.weekday = 'Sunday'
 activity.club = Club('gdansk-przymorze')
 
 mail.send_on_successful_booking(activity)
-mail.send_on_activity_not_found(activity)
-mail.send_on_max_retry_exceeded(activity,50)
+#mail.send_on_activity_not_found(activity)
+#mail.send_on_max_retry_exceeded(activity,50)
 
 
 

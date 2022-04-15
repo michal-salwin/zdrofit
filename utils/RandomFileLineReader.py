@@ -1,20 +1,14 @@
 import random
-import os
-
 class RandomFileLineReader:
 
-    def __init__(self):
-        pass
+    def __init__(self, file_name: str):
+        self.__file_name = file_name
 
-    def read_line(self, file_name: str) -> str:
-        with open(file_name,'r') as file:
+    def read_line(self) -> str:
+        with open(self.__file_name,'r',encoding='UTF-8') as file:
             line = next(file)
             for num, aline in enumerate(file, 2):
                 if random.randrange(num):
                     continue
                 line = aline
             return line
-
-r = RandomFileLineReader()
-line = r.read_line('file.txt')
-print(line)

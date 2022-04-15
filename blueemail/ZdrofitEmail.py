@@ -6,7 +6,7 @@ from exceptions.SendInBlueEmailException import SendInBlueEmailException
 from utils.Weekday import Weekday
 from zdrofit.Activity import Activity
 from zdrofit.User import User
-
+from utils.RandomFileLineReader import RandomFileLineReader
 class ZdrofitEmail:
 
     def __init__(self, user: User):
@@ -29,6 +29,7 @@ class ZdrofitEmail:
     def send_on_successful_booking(self, activity: Activity):
  
         message = self.prepare_message()
+        random_line = RandomFileLineReader('email_variable_lines.txt')
         message.subject = 'Zdrofit -automatyczna rejestracja'
         text = (
                 '<html><body>'
@@ -36,7 +37,7 @@ class ZdrofitEmail:
                 f'<p>{self.user.get_first_name_vocative()},</p>'
                 f'<p>Zapis na zajęcja <b>{activity.name}</b> odbywające się <b>{Weekday.name_pl_acc(activity.weekday)}</b> o godz. <b>{activity.hour}</b> w klubie <b>{activity.club.get_name()}</b> zakończył się pomyślnie.<br/>'
                 f'Pozycja na liście: <b>{activity.limit - activity.available + 1}</b>, liczba miejsc na zajęciach: <b>{activity.limit}</b></p>'
-                '<p>Przybywaj i daj z siebie wszystko! :-)'
+                f'<p>{random_line.read_line()}</p>'
                 '</body></html>'
         )
         message.content_html = text
