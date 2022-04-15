@@ -1,17 +1,16 @@
 from blueemail.ZdrofitEmail import ZdrofitEmail
 from rest.BaseRequest import BaseRequest
-from app_config.AppConfig import AppConfig
 from exceptions.HttpRequestError import HttpRequestError
 from time import sleep
 from app_logger.AppLogger import AppLogger
 from zdrofit.Activity import Activity
 from zdrofit.ActivityList import ActivityList
-
+from zdrofit.User import User
 class Booker:
 
     config = None
     logger = None
-    email = None
+    user = None
     request: BaseRequest
 
     clubs = {
@@ -20,19 +19,18 @@ class Booker:
         'gdynia-chwarzno': 43
     }
 
-    def __init__(self, account: str, app_config: AppConfig, logger: AppLogger):
+    def __init__(self, user: User, logger: AppLogger):
         self.logger = logger
-        self.app_config = app_config
-        self.user_name = self.app_config.get_account_param(account,'email')
-        self.password =  self.app_config.get_account_param(account,'password')
+        self.user = user
+
         self.request = BaseRequest()
-        self.email = ZdrofitEmail(account)
+        self.email = ZdrofitEmail(user)
 
     def __login(self):
         data = {
             "RememberMe": "false",
-            "Login": self.user_name,
-            "Password": self.password
+            "Login": self.user.get_email(),
+            "Password": self.user.get_password()
         }  
 
         uri = '/ClientPortal2/Auth/Login' 
@@ -41,7 +39,7 @@ class Booker:
         if response.status_code != 200:
             raise HttpRequestError(uri, response.status_code, response.reason, response.content)
 
-        self.logger.info(f'{self.user_name} has successfully logged in')
+        self.logger.info(f'{self.user.get_email()} has successfully logged in')
 
     def get_weekly_classes(self, club_name) -> ActivityList:
         data = {

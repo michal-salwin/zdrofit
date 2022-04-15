@@ -4,22 +4,23 @@ from app_config.AppConfig import AppConfig
 from app_logger.AppLogger import AppLogger
 from exceptions.SendInBlueEmailException import SendInBlueEmailException
 from zdrofit.Activity import Activity
+from zdrofit.User import User
 
 class ZdrofitEmail:
 
-    def __init__(self, account: str):
+    def __init__(self, user: User):
 
         self.config = AppConfig()
         self.logger = AppLogger()
         self.email = BlueEmail(self.config.get(section='sendinblue', option='api_key'))
-        self.account = account
+        self.user = user
 
     def prepare_message(self) -> HtmlMessage:
         message = HtmlMessage()
         message.from_email = self.config.get(section='sendinblue', option='from_email')
         message.from_name = self.config.get(section='sendinblue', option='from_name')
-        message.to_email = self.config.get_account_param(self.account,'email')
-        message.to_name =  self.config.get_account_param(self.account,'name')
+        message.to_email = self.user.get_email()
+        message.to_name =  self.user.get_fullname()
         message.cc_email = self.config.get(section='sendinblue', option='cc_email')
         message.cc_name = self.config.get(section='sendinblue', option='cc_name')
         return message
