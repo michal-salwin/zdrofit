@@ -1,8 +1,9 @@
 import unittest
+from tests.TestCaseBase import TestCaseBase
 from utils.Weekday import Weekday
 
 
-class TestWeekday(unittest.TestCase):
+class TestWeekday(TestCaseBase):
 
     def test_Weekday(self):
          self.assertEqual('Poniedziałek',Weekday.name_pl('monday'))

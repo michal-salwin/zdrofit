@@ -3,7 +3,6 @@ from utils.Weekday import Weekday
 from utils.RandomFileLineReader import RandomFileLineReader
 from blueemail.BaseZdrofitEmail import BaseZdrofitEmail
 
-
 class ZdrofitEmailSuccess(BaseZdrofitEmail):
 
     

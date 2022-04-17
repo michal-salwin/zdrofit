@@ -1,8 +1,9 @@
 import unittest
+from tests.TestCaseBase import TestCaseBase
 from utils.RandomFileLineReader import RandomFileLineReader
 
 
-class TestRandomFileLineReader(unittest.TestCase):
+class TestRandomFileLineReader(TestCaseBase):
 
     def test_RandomFileReader(self):
         reader = RandomFileLineReader('email_variable_lines.txt')

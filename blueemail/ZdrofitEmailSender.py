@@ -7,7 +7,6 @@ from exceptions.SendInBlueEmailException import SendInBlueEmailException
 from zdrofit.Activity import Activity
 from zdrofit.User import User
 
-
 class ZdrofitEmailSender:
 
     message: HtmlMessage = None

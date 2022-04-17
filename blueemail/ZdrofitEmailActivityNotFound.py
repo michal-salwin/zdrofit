@@ -2,7 +2,6 @@ from blueemail.HtmlMessage import HtmlMessage
 from utils.Weekday import Weekday
 from blueemail.BaseZdrofitEmail import BaseZdrofitEmail
 
-
 class ZdrofitEmailActivityNotFound(BaseZdrofitEmail):
 
     def get_message(self) -> HtmlMessage:

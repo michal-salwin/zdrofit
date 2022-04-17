@@ -1,8 +1,9 @@
 import unittest
 from app_config.AppConfig import AppConfig
+from tests.TestCaseBase import TestCaseBase
 
 
-class TestAppConfig(unittest.TestCase):
+class TestAppConfig(TestCaseBase):
 
     def test_AppConfig(self):
         config = AppConfig()
@@ -11,6 +12,7 @@ class TestAppConfig(unittest.TestCase):
 
         name = config.get('sendinblue','from_name')
         self.assertLessEqual('Zdrofit',name)
+
 
 if __name__ == '__main__':
     unittest.main()

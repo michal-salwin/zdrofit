@@ -3,6 +3,7 @@ from sib_api_v3_sdk.rest import ApiException
 from blueemail.HtmlMessage import HtmlMessage
 from exceptions.SendInBlueEmailException import SendInBlueEmailException
 class BlueEmail:
+    
     api_instance = None
 
     def __init__(self,api_key: str):

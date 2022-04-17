@@ -1,4 +1,5 @@
 class HtmlMessage:
+    
     from_email: str = None
     from_name: str = None
     to_email: str = None
