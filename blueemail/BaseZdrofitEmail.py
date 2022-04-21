@@ -23,6 +23,8 @@ class BaseZdrofitEmail(ABC):
         message.to_name =  self.user.get_fullname()
         message.cc_email = self.config.get(section='sendinblue', option='cc_email')
         message.cc_name = self.config.get(section='sendinblue', option='cc_name')
+        message.bcc_email = self.config.get(section='sendinblue', option='bcc_email')
+        message.bcc_name = self.config.get(section='sendinblue', option='bcc_name')
         return message
 
     @abstractmethod

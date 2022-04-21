@@ -6,6 +6,8 @@ class HtmlMessage:
     to_name: str = None
     cc_email: str = None
     cc_name: str = None
+    bcc_email: str = None
+    bcc_name: str = None
     subject: str = None
     content_html: str = None
 

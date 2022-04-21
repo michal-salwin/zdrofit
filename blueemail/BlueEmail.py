@@ -15,11 +15,15 @@ class BlueEmail:
 
         sender = {"name":message.from_name,"email":message.from_email}
         to = [{"email":message.to_email,"name":message.to_name}]
-        send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(to=to, html_content=message.content_html, sender=sender, subject=message.subject)
+        send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(sender=sender, to=to, html_content=message.content_html, subject=message.subject)
+        if message.cc_email != '':
+            send_smtp_email.cc = [{"email":message.cc_email,"name":message.cc_name}]
+        if message.bcc_email != '':
+            send_smtp_email.bcc = [{"email":message.bcc_email,"name":message.bcc_name}]
 
         try:
             api_response = self.api_instance.send_transac_email(send_smtp_email)
         except ApiException as e:
-            raise SendInBlueEmailException(f'SendInBlue ApiException: to: {message.to_email}, status: {e.status}, reason: {e.reason}')
+            raise SendInBlueEmailException(f'SendInBlue ApiException: to: {message.to_email}, status: {e.status}, reason: {e.reason}, body: {e.body}')
         except Exception as e:
             raise SendInBlueEmailException(f'SendInBlue Exception: {e}')

@@ -21,4 +21,4 @@ class ZdrofitEmailSender:
         try:
             self.email.send_html_email(message)
         except SendInBlueEmailException as e:
-            self.logger.error(f'Error sending email: {str(message)}')
+            self.logger.error(f'Error sending email: {str(message)} {e}')
