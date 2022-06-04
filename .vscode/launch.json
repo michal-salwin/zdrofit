@@ -12,7 +12,7 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "args":[
-                "-i", "MS", "-c", "gdansk-przymorze", "-a", "TBC", "-w", "Friday", "-s", "18:30"
+                "-i", "MS", "-b", "zdrofit", "-c", "gdansk-przymorze", "-a", "Stretching", "-w", "Friday", "-s", "19:30"
             ]
         }
     ]

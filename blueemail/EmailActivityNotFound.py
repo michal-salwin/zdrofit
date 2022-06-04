@@ -1,8 +1,8 @@
 from blueemail.HtmlMessage import HtmlMessage
 from utils.Weekday import Weekday
-from blueemail.BaseZdrofitEmail import BaseZdrofitEmail
+from blueemail.BaseEmail import BaseEmail
 
-class ZdrofitEmailActivityNotFound(BaseZdrofitEmail):
+class EmailActivityNotFound(BaseEmail):
 
     def get_message(self) -> HtmlMessage:
         

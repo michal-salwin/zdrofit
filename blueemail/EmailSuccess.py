@@ -1,11 +1,10 @@
 from blueemail.HtmlMessage import HtmlMessage
+from blueemail.BaseEmail import BaseEmail
 from utils.Weekday import Weekday
 from utils.RandomFileLineReader import RandomFileLineReader
-from blueemail.BaseZdrofitEmail import BaseZdrofitEmail
 
-class ZdrofitEmailSuccess(BaseZdrofitEmail):
+class EmailSuccess(BaseEmail):
 
-    
     def get_message(self) -> HtmlMessage:
         random_line = RandomFileLineReader('email_variable_lines.txt')
         self.message.subject = 'Zdrofit -automatyczna rejestracja'

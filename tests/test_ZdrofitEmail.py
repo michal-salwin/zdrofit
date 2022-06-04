@@ -1,13 +1,13 @@
 from datetime import date
 import unittest
 from app_config.AppConfig import AppConfig
-from blueemail.ZdrofitEmailActivityNotFound import ZdrofitEmailActivityNotFound
-from blueemail.ZdrofitEmailMaxRetryExceeded import ZdrofitEmailMaxRetryExceeded
-from blueemail.ZdrofitEmailSuccess import ZdrofitEmailSuccess
+from blueemail.EmailActivityNotFound import EmailActivityNotFound
+from blueemail.EmailMaxRetryExceeded import EmailMaxRetryExceeded
+from blueemail.EmailSuccess import EmailSuccess
 from tests.TestCaseBase import TestCaseBase
-from zdrofit.Activity import Activity
-from zdrofit.Club import Club
-from zdrofit.User import User
+from booker.Activity import Activity
+from booker.Club import Club
+from booker.User import User
 
 
 class TestZdrofitEmail(TestCaseBase):
@@ -17,7 +17,7 @@ class TestZdrofitEmail(TestCaseBase):
         config = AppConfig()
         user = User('MS', config)
         activity = self.prepare_activity()
-        message = ZdrofitEmailSuccess(user, activity).get_message()
+        message = EmailSuccess(user, activity).get_message()
         self.assertEqual(user.get_email(),message.to_email)
         self.assertEqual(user.get_fullname(),message.to_name)
         self.assertEqual(message.subject,'Zdrofit -automatyczna rejestracja')
@@ -29,7 +29,7 @@ class TestZdrofitEmail(TestCaseBase):
         config = AppConfig()
         user = User('MS', config)
         activity = self.prepare_activity()
-        message = ZdrofitEmailActivityNotFound(user, activity).get_message()
+        message = EmailActivityNotFound(user, activity).get_message()
         self.assertEqual(user.get_email(),message.to_email)
         self.assertEqual(user.get_fullname(),message.to_name)
         self.assertEqual(message.subject,'Zdrofit -automatyczna rejestracja - błąd rejestracji')
@@ -41,7 +41,7 @@ class TestZdrofitEmail(TestCaseBase):
         config = AppConfig()
         user = User('MS', config)
         activity = self.prepare_activity()
-        message = ZdrofitEmailMaxRetryExceeded(user, activity).get_message()
+        message = EmailMaxRetryExceeded(user, activity).get_message()
         self.assertEqual(user.get_email(),message.to_email)
         self.assertEqual(user.get_fullname(),message.to_name)
         self.assertEqual(message.subject,'Zdrofit -automatyczna rejestracja - błąd')

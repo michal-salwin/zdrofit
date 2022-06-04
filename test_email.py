@@ -1,16 +1,16 @@
 from datetime import date
 from app_config.AppConfig import AppConfig
-from blueemail.ZdrofitEmailSender import ZdrofitEmailSender
+from blueemail.EmailSender import EmailSender
 
-from blueemail.ZdrofitEmailSuccess import ZdrofitEmailSuccess
-from zdrofit.Activity import Activity
-from zdrofit.Club import Club
-from zdrofit.User import User
+from blueemail.EmailSuccess import EmailSuccess
+from booker.Activity import Activity
+from booker.Club import Club
+from booker.User import User
 
 config = AppConfig()
 user = User('MS',config)
 
-sender = ZdrofitEmailSender()
+sender = EmailSender()
 
 activity = Activity()
 activity.id = 123456
@@ -23,9 +23,7 @@ activity.status = 'Booked'
 activity.weekday = 'Sunday'
 activity.club = Club('gdansk-przymorze')
 
-sender.send(ZdrofitEmailSuccess(user,activity).get_message())
-#mail.send_on_activity_not_found(activity)
-#mail.send_on_max_retry_exceeded(activity,50)
+sender.send(EmailSuccess(user,activity).get_message())
 
 
 

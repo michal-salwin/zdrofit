@@ -1,10 +1,10 @@
 from blueemail.HtmlMessage import HtmlMessage
 from app_config.AppConfig import AppConfig
-from zdrofit.Activity import Activity
-from zdrofit.User import User
+from booker.Activity import Activity
+from booker.User import User
 from abc import ABC, abstractmethod
 
-class BaseZdrofitEmail(ABC):
+class BaseEmail(ABC):
 
     message: HtmlMessage = None
 

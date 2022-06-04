@@ -1,60 +1,43 @@
-from blueemail.ZdrofitEmailActivityNotFound import ZdrofitEmailActivityNotFound
-from blueemail.ZdrofitEmailMaxRetryExceeded import ZdrofitEmailMaxRetryExceeded
-from blueemail.ZdrofitEmailSender import ZdrofitEmailSender
-from blueemail.ZdrofitEmailSuccess import ZdrofitEmailSuccess
+from blueemail.EmailActivityNotFound import EmailActivityNotFound
+from blueemail.EmailMaxRetryExceeded import EmailMaxRetryExceeded
+from blueemail.EmailSender import EmailSender
+from blueemail.EmailSuccess import EmailSuccess
+from booker.activity_list_builder.ActivityListBuilder import ActivityListBuilder
 
-from rest.BaseRequest import BaseRequest
+
+from booker.rest_interface.GymRestInterface import GymRestInterface
 from exceptions.HttpRequestError import HttpRequestError
 from time import sleep
 from app_logger.AppLogger import AppLogger
-from zdrofit.Activity import Activity
-from zdrofit.ActivityList import ActivityList
-from zdrofit.Club import Club
-from zdrofit.User import User
+from booker.Activity import Activity
+from booker.ActivityList import ActivityList
+from booker.Club import Club
+from booker.User import User
+
 class Booker:
 
     config = None
     logger = None
     user = None
-    email_sender: ZdrofitEmailSender
-    request: BaseRequest
+    email_sender: EmailSender
+    rest_interface: GymRestInterface
+    list_builder: ActivityListBuilder
 
-    def __init__(self, user: User, logger: AppLogger):
-        self.logger = logger
+    def __init__(self, user: User, rest_interface: GymRestInterface, list_builder: ActivityListBuilder):
         self.user = user
-
-        self.request = BaseRequest()
-        self.email_sender = ZdrofitEmailSender()
+        self.rest_interface = rest_interface
+        self.list_builder = list_builder
+        self.email_sender = EmailSender()
+        self.logger = AppLogger()
 
     def __login(self):
-        data = {
-            "RememberMe": "false",
-            "Login": self.user.get_email(),
-            "Password": self.user.get_password()
-        }  
-
-        uri = '/ClientPortal2/Auth/Login' 
-        response = self.request.login(uri, data=data)
-
-        if response.status_code != 200:
-            raise HttpRequestError(uri, response.status_code, response.reason, response.content)
-
+        self.rest_interface.login(self.user)
         self.logger.info(f'{self.user.get_email()} has successfully logged in')
 
     def get_weekly_classes(self, club: Club) -> ActivityList:
-        data = {
-            "clubId": club.get_id(),
-            "categoryId": 'null',
-            "daysInWeek": '7'
-        }
-        uri = '/ClientPortal2/Classes/ClassCalendar/WeeklyClasses'
-        response = self.request.post(uri, data=data)
-        if response.status_code != 200:
-            raise HttpRequestError(uri, response.status_code, response.reason, response.content)
- 
-        return ActivityList(response.text, club)
+        classes_json = self.rest_interface.get_weekly_classes(club)
+        return ActivityList(self.list_builder.build_activity_list(classes_json, club))
 
- 
     def get_activities(self, club: Club, activities=None, weekday=None, hour=None ,bookable_only=False):
         
         try:
@@ -75,6 +58,13 @@ class Booker:
         except HttpRequestError as e:
             self.logger.error(e.message)
              
+    def __book_class(self,class_id):
+        self.rest_interface.book_class(class_id)
+
+    def __cancel_booking(self,class_id):
+        self.rest_interface.cancel_booking(class_id)
+
+
     def book_activity(self, activity: Activity, nr_of_retries=50, seconds_between_retry=5):
         
         self.logger.info(f"Trying to book {activity.name} at club: {activity.club.get_name()}, weekday: {activity.weekday}  hour: {activity.hour}")
@@ -96,7 +86,7 @@ class Booker:
 
         if activity_list.get_activity_count() == 0:
             self.logger.info(f"Requested activity not found in callendar")
-            self.email_sender.send(ZdrofitEmailActivityNotFound(self.user,activity).get_message())
+            self.email_sender.send(EmailActivityNotFound(self.user,activity).get_message())
             return
         
         activity = activity_list.get_first_activity()
@@ -106,7 +96,7 @@ class Booker:
             
             try:
                 self.__book_class(activity.id)
-                self.email_sender.send(ZdrofitEmailSuccess(self.user,activity).get_message())
+                self.email_sender.send(EmailSuccess(self.user,activity).get_message())
                 self.logger.info(f"Activity {activity.name} booked successfully")
                 return
             except HttpRequestError as e:
@@ -119,7 +109,7 @@ class Booker:
                 request_nr = request_nr + 1
                 sleep(seconds_between_retry)
         
-        self.email_sender.send(ZdrofitEmailMaxRetryExceeded(self.user,activity).get_message())
+        self.email_sender.send(EmailMaxRetryExceeded(self.user,activity).get_message())
 
     def cancel_booking(self, activity: Activity, weekday, hour):
         
@@ -159,24 +149,4 @@ class Booker:
         self.logger.info(f"Activity {activity.name} booking cancelled successfully")
 
 
-    def __book_class(self,class_id):
-        data = {
-            "classId": class_id
-        }
-        uri = '/ClientPortal2/Classes/ClassCalendar/BookClass'
-        
-        response = self.request.post(uri, data=data)
-
-        if response.status_code != 200:
-            raise HttpRequestError(uri, response.status_code, response.reason, response.content)
-
-    def __cancel_booking(self,class_id):
-        data = {
-            "classId": class_id
-        }
-        uri = '/ClientPortal2/Classes/ClassCalendar/CancelBooking'
-        
-        response = self.request.post(uri, data=data)
-        if response.status_code != 200:
-            raise HttpRequestError(uri, response.status_code, response.reason, response.content)
 

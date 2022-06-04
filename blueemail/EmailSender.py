@@ -1,15 +1,29 @@
+from blueemail.BaseEmail import BaseEmail
+from blueemail.HtmlMessage import HtmlMessage
+from app_config.AppConfig import AppConfig
+from app_logger.AppLogger import AppLogger
+from exceptions.SendInBlueEmailException import SendInBlueEmailException
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 from blueemail.HtmlMessage import HtmlMessage
 from exceptions.SendInBlueEmailException import SendInBlueEmailException
-class BlueEmail:
-    
-    api_instance = None
+class EmailSender:
 
-    def __init__(self,api_key: str):
+    message: HtmlMessage = None
+
+    def __init__(self):
+
+        self.config = AppConfig()
+        self.logger = AppLogger()
         configuration = sib_api_v3_sdk.Configuration()
-        configuration.api_key['api-key'] = api_key
+        configuration.api_key['api-key'] = self.config.get(section='sendinblue', option='api_key')
         self.api_instance = sib_api_v3_sdk.TransactionalEmailsApi(sib_api_v3_sdk.ApiClient(configuration))
+
+    def send(self, message: HtmlMessage):
+        try:
+            self.send_html_email(message)
+        except SendInBlueEmailException as e:
+            self.logger.error(f'Error sending email: {str(message)} {e}')
 
     def send_html_email(self, message: HtmlMessage):
 
