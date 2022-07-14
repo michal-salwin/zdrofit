@@ -1,0 +1,393 @@
+[
+    {
+    "id": 100013,
+    "name": "Białystok Zielone Wzgórza",
+    "city": "CityFit",
+    "street": "Wrocławska 20",
+    "postalCode": "15-644",
+    "latitude": 53.12446,
+    "longitude": 23.098491,
+    "startDay": "2017-10-14T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100011,
+    "name": "Bielsko-Biała Park Karpacka",
+    "city": "CityFit",
+    "street": "Kolista  23",
+    "postalCode": "43-316",
+    "latitude": 49.80265,
+    "longitude": 19.029533,
+    "startDay": "2015-10-24T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100014,
+    "name": "Bydgoszcz",
+    "city": "CityFit",
+    "street": "Kruszwicka 1",
+    "postalCode": "85-001",
+    "latitude": 53.125405,
+    "longitude": 17.985155,
+    "startDay": "2017-01-21T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100017,
+    "name": "Chorzów AKS",
+    "city": "CityFit",
+    "street": "Parkowa 20",
+    "postalCode": "41-500",
+    "latitude": 50.291247,
+    "longitude": 18.966001,
+    "startDay": "2017-11-08T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100049,
+    "name": "Gdańsk Forum",
+    "city": "CityFit",
+    "street": "Targ Sienny 7",
+    "postalCode": "80-806",
+    "latitude": 54.349496,
+    "longitude": 18.6429808,
+    "startDay": "2019-04-17T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100015,
+    "name": "Gdańsk Olivia",
+    "city": "CityFit",
+    "street": "Al. Grunwaldzka 472d",
+    "postalCode": "80-309",
+    "latitude": 54.403682,
+    "longitude": 18.571646,
+    "startDay": "2016-04-09T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100047,
+    "name": "Gliwice",
+    "city": "CityFit",
+    "street": "Zwycięstwa 52A",
+    "postalCode": "44-100",
+    "latitude": 50.297571,
+    "longitude": 18.674561,
+    "startDay": "2019-03-16T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100020,
+    "name": "Katowice",
+    "city": "CityFit",
+    "street": "Rynek 12",
+    "postalCode": "40-003",
+    "latitude": 50.259419,
+    "longitude": 19.022304,
+    "startDay": "2016-06-25T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100022,
+    "name": "Kraków Principio",
+    "city": "CityFit",
+    "street": "Armii Krajowej 25",
+    "postalCode": "30-150",
+    "latitude": 50.071524,
+    "longitude": 19.892014,
+    "startDay": "2018-01-13T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100016,
+    "name": "Lublin Gajek",
+    "city": "CityFit",
+    "street": "Al. Spółdzielczości Pracy 26",
+    "postalCode": "20-147",
+    "latitude": 51.263534,
+    "longitude": 22.57097,
+    "startDay": "2015-06-06T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100048,
+    "name": "Lublin Plaza",
+    "city": "CityFit",
+    "street": "Lipowa 13",
+    "postalCode": "20-020",
+    "latitude": 51.245234,
+    "longitude": 22.550391,
+    "startDay": "2019-03-23T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100082,
+    "name": "Lublin Zana",
+    "city": "CityFit",
+    "street": "Zana 19",
+    "postalCode": "20-601",
+    "latitude": 51.2408835,
+    "longitude": 22.5187374,
+    "startDay": "2022-03-01T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100040,
+    "name": "Poznań Pestka",
+    "city": "CityFit",
+    "street": "Aleja Solidarności 47",
+    "postalCode": "61-696",
+    "latitude": 52.437779,
+    "longitude": 16.918276,
+    "startDay": "2018-09-29T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100012,
+    "name": "Rzeszów",
+    "city": "CityFit",
+    "street": "Al. Tadeusza Rejtana  65",
+    "postalCode": "35-326",
+    "latitude": 50.01963,
+    "longitude": 22.017841,
+    "startDay": "2014-07-21T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100045,
+    "name": "Toruń Plaza",
+    "city": "CityFit",
+    "street": "Władysława Broniewskiego 90",
+    "postalCode": "87-100",
+    "latitude": 53.015686,
+    "longitude": 18.562089,
+    "startDay": "2018-11-17T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100044,
+    "name": "Warszawa Reduta",
+    "city": "CityFit",
+    "street": "al. Jerozolimskie 148",
+    "postalCode": "02-326",
+    "latitude": 52.213181,
+    "longitude": 20.951219,
+    "startDay": "2018-11-10T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100018,
+    "name": "Warszawa Rondo ONZ",
+    "city": "CityFit",
+    "street": "Twarda 18",
+    "postalCode": "00-105",
+    "latitude": 52.23458,
+    "longitude": 20.999323,
+    "startDay": "2015-06-03T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100029,
+    "name": "Warszawa Targówek",
+    "city": "CityFit",
+    "street": "Głębocka 13",
+    "postalCode": "03-287",
+    "latitude": 52.30016,
+    "longitude": 21.056424,
+    "startDay": "2015-06-12T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100010,
+    "name": "Warszawa Wiatraczna",
+    "city": "CityFit",
+    "street": "Grochowska 207",
+    "postalCode": "04-357",
+    "latitude": 52.244277,
+    "longitude": 21.086517,
+    "startDay": "2018-03-10T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100043,
+    "name": "Warszawa Wola",
+    "city": "CityFit",
+    "street": "Młynarska 8/12",
+    "postalCode": "00-001",
+    "latitude": 52.235898,
+    "longitude": 20.973148,
+    "startDay": "2018-10-20T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100028,
+    "name": "Wałbrzych Galeria Victoria",
+    "city": "CityFit",
+    "street": "1 Maja  64",
+    "postalCode": "58-300",
+    "latitude": 50.767436,
+    "longitude": 16.267794,
+    "startDay": "2016-01-09T00:00:00",
+    "seller":       {
+       "name": "CityFit 24/7 Sp. z o.o.",
+       "nip": "701-043-81-73",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100019,
+    "name": "Wrocław Stare Miasto",
+    "city": "CityFit",
+    "street": "Szewska 3a",
+    "postalCode": "50-053",
+    "latitude": 51.107627,
+    "longitude": 17.034321,
+    "startDay": "2017-04-08T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ },
+    {
+    "id": 100021,
+    "name": "Wrocław Wroclavia",
+    "city": "CityFit",
+    "street": "Sucha 1",
+    "postalCode": "50-086",
+    "latitude": 51.097049,
+    "longitude": 17.036178,
+    "startDay": "2017-10-28T00:00:00",
+    "seller":       {
+       "name": "CityFit Membership Sp. z o.o.",
+       "nip": "527-27-69-131",
+       "issuerName": "Grzegorz Gajewski",
+       "street": "Al. Jana Pawła II nr 27",
+       "city": "Warszawa"
+    }
+ }
+]
