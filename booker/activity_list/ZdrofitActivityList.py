@@ -1,11 +1,11 @@
 
 from booker.Activity import Activity
-from booker.Club import Club
-from booker.activity_list_builder.ActivityListBuilder import ActivityListBuilder
+from booker.club.ZdrofitClub import Club
+from booker.activity_list.ActivityList import ActivityList
 import json
 from datetime import date
 
-class ZdrofitActivityListBuilder(ActivityListBuilder):
+class ZdrofitActivityList(ActivityList):
 
     def build_activity_list(self, json_activity_list: str, club: Club) -> list[Activity]:
 

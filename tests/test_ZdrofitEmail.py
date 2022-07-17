@@ -6,7 +6,7 @@ from blueemail.EmailMaxRetryExceeded import EmailMaxRetryExceeded
 from blueemail.EmailSuccess import EmailSuccess
 from tests.TestCaseBase import TestCaseBase
 from booker.Activity import Activity
-from booker.Club import Club
+from booker.club.ZdrofitClub import Club
 from booker.User import User
 
 

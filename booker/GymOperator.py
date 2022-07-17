@@ -1,7 +1,8 @@
 class GymOperator:
 
     __operators = {
-        'zdrofit':                ('Zdrofit')
+        'zdrofit':                ('Zdrofit'),
+        'cityfit':                ('CityFit')
     }
 
     __symbol: str = None
@@ -10,7 +11,7 @@ class GymOperator:
         self.__symbol = symbol.lower()
 
     def get_name(self) -> str:
-        return str(self.__clubs[self.__symbol][0])
+        return str(self.__operators[self.__symbol][0])
 
     def get_symbol(self) -> str:
         return self.__symbol

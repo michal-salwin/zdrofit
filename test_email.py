@@ -4,7 +4,7 @@ from blueemail.EmailSender import EmailSender
 
 from blueemail.EmailSuccess import EmailSuccess
 from booker.Activity import Activity
-from booker.Club import Club
+from booker.club.ZdrofitClub import Club
 from booker.User import User
 
 config = AppConfig()

@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
-from booker.Club import Club
+from booker.Activity import Activity
+from booker.User import User
+from booker.club.ZdrofitClub import Club
 from booker.rest_interface.BaseRequest import BaseRequest
 
 class GymRestInterface(ABC):
@@ -10,7 +12,7 @@ class GymRestInterface(ABC):
         self.request = BaseRequest()
  
     @abstractmethod
-    def login(self):
+    def login(self, user: User):
         pass
 
     @abstractmethod
@@ -18,7 +20,7 @@ class GymRestInterface(ABC):
         pass
  
     @abstractmethod
-    def book_class(self,class_id):
+    def book_class(self,activity: Activity):
         pass
 
     @abstractmethod

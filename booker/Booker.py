@@ -2,7 +2,7 @@ from blueemail.EmailActivityNotFound import EmailActivityNotFound
 from blueemail.EmailMaxRetryExceeded import EmailMaxRetryExceeded
 from blueemail.EmailSender import EmailSender
 from blueemail.EmailSuccess import EmailSuccess
-from booker.activity_list_builder.ActivityListBuilder import ActivityListBuilder
+from booker.activity_list.ActivityList import ActivityList
 
 
 from booker.rest_interface.GymRestInterface import GymRestInterface
@@ -11,7 +11,7 @@ from time import sleep
 from app_logger.AppLogger import AppLogger
 from booker.Activity import Activity
 from booker.ActivityList import ActivityList
-from booker.Club import Club
+from booker.club.ZdrofitClub import Club
 from booker.User import User
 
 class Booker:
@@ -21,9 +21,9 @@ class Booker:
     user = None
     email_sender: EmailSender
     rest_interface: GymRestInterface
-    list_builder: ActivityListBuilder
+    list_builder: ActivityList
 
-    def __init__(self, user: User, rest_interface: GymRestInterface, list_builder: ActivityListBuilder):
+    def __init__(self, user: User, rest_interface: GymRestInterface, list_builder: ActivityList):
         self.user = user
         self.rest_interface = rest_interface
         self.list_builder = list_builder
@@ -43,6 +43,7 @@ class Booker:
         try:
             self.__login()
             activity_list = self.get_weekly_classes(club)
+            print(activity_list)
             if activities != None:
                 activity_list.filter_by_activity(activities)
             if bookable_only:
