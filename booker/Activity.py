@@ -1,5 +1,5 @@
 from datetime import datetime
-from booker.club.ZdrofitClub import Club
+from booker.club.Club import Club
 
 
 class Activity:
