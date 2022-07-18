@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from booker.Activity import Activity
 from booker.User import User
-from booker.club.ZdrofitClub import Club
+from booker.club.Club import Club
 from booker.rest_interface.BaseRequest import BaseRequest
 
 class GymRestInterface(ABC):
@@ -24,6 +24,6 @@ class GymRestInterface(ABC):
         pass
 
     @abstractmethod
-    def cancel_booking(self,class_id):
+    def cancel_booking(self,activity: Activity):
         pass
 

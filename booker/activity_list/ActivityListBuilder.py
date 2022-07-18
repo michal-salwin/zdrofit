@@ -1,17 +1,10 @@
-from booker.activity_list.ActivityList import ActivityList
-from booker.activity_list.CityFitActivityList import CityFitActivityList
-from booker.activity_list.ZdrofitActivityList import ZdrofitActivityList
+from abc import ABC, abstractmethod
 
-class ActivityListBuilder:
+from booker.Activity import Activity
+from booker.club.Club import Club
 
-    __gym_operator: str
-    
-    def __init__(self, gym_operator: str):
-        self.__gym_operator = gym_operator
-    
-    def get_instance(self) -> ActivityList:
-        match self.__gym_operator:
-            case 'zdrofit':
-                return ZdrofitActivityList()
-            case 'cityfit':
-                return CityFitActivityList()
+class ActivityListBuilder(ABC):
+
+    @abstractmethod
+    def build_activity_list(self, json_data: str, club: Club) -> list[Activity]:
+        pass

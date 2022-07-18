@@ -2,7 +2,7 @@ from booker.Activity import Activity
 from booker.User import User
 from booker.rest_interface.GymRestInterface import GymRestInterface
 from exceptions.HttpRequestError import HttpRequestError
-from booker.club.ZdrofitClub import Club
+from booker.club.Club import Club
 
 class ZdrofitRestInterface(GymRestInterface):
 
@@ -51,9 +51,9 @@ class ZdrofitRestInterface(GymRestInterface):
         if response.status_code != 200:
             raise HttpRequestError(uri, response.status_code, response.reason, response.content)
 
-    def cancel_booking(self,class_id):
+    def cancel_booking(self,activity: Activity):
         data = {
-            "classId": class_id
+            "classId": activity.id
         }
         uri = '/ClientPortal2/Classes/ClassCalendar/CancelBooking'
         

@@ -2,7 +2,7 @@ from booker.Activity import Activity
 from booker.User import User
 from booker.rest_interface.GymRestInterface import GymRestInterface
 from exceptions.HttpRequestError import HttpRequestError
-from booker.club.ZdrofitClub import Club
+from booker.club.Club import Club
 from datetime import datetime, timedelta
 import json
 
@@ -39,22 +39,22 @@ class CityFitRestInterface(GymRestInterface):
         response = self.request.get(uri)
         if response.status_code != 200:
             raise HttpRequestError(uri, response.status_code, response.reason, response.content)
- 
+
         return response.text
 
  
     def book_class(self,activity: Activity):
         data = {
-            "reservationDate": activity.date.strftime("%Y-%m-%d")
+            "reservationDate": activity.date
         }
-        uri = '/me/reservations/'+activity.id
+        uri = '/me/reservations/'+str(activity.id)
+        
+        response = self.request.post_json(uri, data)
 
-        response = self.request.post(uri, data=data)
-
-        if response.status_code != 200:
+        if response.status_code != 201:
             raise HttpRequestError(uri, response.status_code, response.reason, response.content)
 
-    def cancel_booking(self,class_id):
+    def cancel_booking(self,activity: Activity):
         #TODO niezaimplementowane
         pass
 

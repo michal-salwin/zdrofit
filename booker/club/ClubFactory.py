@@ -3,7 +3,7 @@ from booker.club.Club import Club
 from booker.club.ZdrofitClub import ZdrofitClub
 
 
-class ClubBuilder:
+class ClubFactory:
 
     __gym_operator: str
     __club_name: str

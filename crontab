@@ -1,9 +1,20 @@
-30 17 * * SAT cd zdrofit && python book_activity.py -i AT -g zdrofit -c gdansk-przymorze -a Sztangi             -w Monday     -s 17:30
-30 17 * * SAT cd zdrofit && python book_activity.py -i MS -g zdrofit -c gdansk-przymorze -a Sztangi             -w Monday     -s 17:30
-30 18 * * SAT cd zdrofit && python book_activity.py -i AT -g zdrofit -c gdansk-przymorze -a Interwał            -w Monday     -s 18:30
-30 18 * * SAT cd zdrofit && python book_activity.py -i MS -g zdrofit -c gdansk-przymorze -a Interwał            -w Monday     -s 18:30
-30 17 * * WED cd zdrofit && python book_activity.py -i AT -g zdrofit -c gdansk-przymorze -a "Trening Obwodowy"  -w Friday     -s 17:30
-30 17 * * WED cd zdrofit && python book_Activity.py -i MS -g zdrofit -c gdansk-przymorzev-a "Trening Obwodowy"  -w Friday     -s 17:30
-00 09 * * THU cd zdrofit && python book_activity.py -i AT -g zdrofit -c gdansk-przymorze -a "Full Body Workout" -w Saturday   -s 09:00
-00 10 * * THU cd zdrofit && python book_activity.py -i AT -g zdrofit -c gdansk-przymorze -a "Zdrowy kręgosłup"  -w Saturday   -s 10:00
-00 19 * * WED cd zdrofit && python book_activity.py -i MS -g zdrofit -c gdynia-karwiny   -a Sztangi             -w Friday     -s 19:00
+#AT
+30 17 * * SAT cd zdrofit && python book_activity.py -i AT  -c gdansk-przymorze -a Sztangi             -w Monday     -s 17:30
+30 18 * * SAT cd zdrofit && python book_activity.py -i AT  -c gdansk-przymorze -a Interwał            -w Monday     -s 18:30
+30 17 * * WED cd zdrofit && python book_activity.py -i AT  -c gdansk-przymorze -a "Trening Obwodowy"  -w Friday     -s 17:30
+00 09 * * THU cd zdrofit && python book_activity.py -i AT  -c gdansk-przymorze -a "Full Body Workout" -w Saturday   -s 09:00
+00 10 * * THU cd zdrofit && python book_activity.py -i AT  -c gdansk-przymorze -a "Zdrowy kręgosłup"  -w Saturday   -s 10:00
+
+#MS
+30 17 * * SAT cd zdrofit && python book_activity.py -i MS  -c gdansk-przymorze -a Sztangi             -w Monday     -s 17:30
+30 18 * * SAT cd zdrofit && python book_activity.py -i MS  -c gdansk-przymorze -a Interwał            -w Monday     -s 18:30
+30 17 * * WED cd zdrofit && python book_Activity.py -i MS  -c gdansk-przymorze -a "Trening Obwodowy"  -w Friday     -s 17:30
+00 19 * * MON cd zdrofit && python book_activity.py -i MS  -c gdynia-karwiny   -a Sztangi             -w Wednesday  -s 19:00
+
+#MSZ
+00 18 * * SAT cd zdrofit && python book_activity.py -i MSZ -c gdansk-forum -a "BRAZYLIJSKIE POŚLADKI" -w Monday     -s 18:00
+00 19 * * SAT cd zdrofit && python book_activity.py -i MSZ -c gdansk-forum -a "TOP IN THE CITY"       -w Monday     -s 19:00
+00 19 * * MON cd zdrofit && python book_activity.py -i MSZ -c gdansk-forum -a "MINI BANDS WORKOUT"    -w Wednesday  -s 19:00
+00 20 * * MON cd zdrofit && python book_activity.py -i MSZ -c gdansk-forum -a "STRETCHING"            -w Wednesday  -s 20:00
+00 18 * * WED cd zdrofit && python book_activity.py -i MSZ -c gdansk-forum -a "MINI BANDS WORKOUT"    -w Friday     -s 18:00
+

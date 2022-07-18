@@ -2,7 +2,7 @@ from booker.rest_interface.GymRestInterface import GymRestInterface
 from booker.rest_interface.ZdrofitRestInterface import ZdrofitRestInterface
 from booker.rest_interface.CityFitRestInterface import CityFitRestInterface
 
-class RestInterfaceBuilder:
+class RestInterfaceFactory:
 
     __gym_operator: str
     

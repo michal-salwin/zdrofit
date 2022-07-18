@@ -6,13 +6,13 @@ from blueemail.EmailMaxRetryExceeded import EmailMaxRetryExceeded
 from blueemail.EmailSuccess import EmailSuccess
 from tests.TestCaseBase import TestCaseBase
 from booker.Activity import Activity
-from booker.club.ZdrofitClub import Club
+from booker.club.Club import Club
 from booker.User import User
 
 
-class TestZdrofitEmail(TestCaseBase):
+class TestGymBookerEmail(TestCaseBase):
 
-    def test_ZdrofitEmailSuccess(self):
+    def test_GymBookerEmailSuccess(self):
 
         config = AppConfig()
         user = User('MS', config)
@@ -20,11 +20,11 @@ class TestZdrofitEmail(TestCaseBase):
         message = EmailSuccess(user, activity).get_message()
         self.assertEqual(user.get_email(),message.to_email)
         self.assertEqual(user.get_fullname(),message.to_name)
-        self.assertEqual(message.subject,'Zdrofit -automatyczna rejestracja')
+        self.assertEqual(message.subject,'GymBooker -automatyczna rejestracja')
         self.assertEqual(config.get(section='sendinblue', option='from_email'),message.from_email)
         self.assertEqual(config.get(section='sendinblue', option='from_name'),message.from_name)
 
-    def test_ZdrofitEmailActivityNotFound(self):
+    def test_GymBookerEmailActivityNotFound(self):
 
         config = AppConfig()
         user = User('MS', config)
@@ -32,11 +32,11 @@ class TestZdrofitEmail(TestCaseBase):
         message = EmailActivityNotFound(user, activity).get_message()
         self.assertEqual(user.get_email(),message.to_email)
         self.assertEqual(user.get_fullname(),message.to_name)
-        self.assertEqual(message.subject,'Zdrofit -automatyczna rejestracja - błąd rejestracji')
+        self.assertEqual(message.subject,'GymBooker -automatyczna rejestracja - błąd rejestracji')
         self.assertEqual(config.get(section='sendinblue', option='from_email'),message.from_email)
         self.assertEqual(config.get(section='sendinblue', option='from_name'),message.from_name)
 
-    def test_ZdrofitEmailMaxRetryExceeded(self):
+    def test_GymBookerEmailMaxRetryExceeded(self):
 
         config = AppConfig()
         user = User('MS', config)
@@ -44,7 +44,7 @@ class TestZdrofitEmail(TestCaseBase):
         message = EmailMaxRetryExceeded(user, activity).get_message()
         self.assertEqual(user.get_email(),message.to_email)
         self.assertEqual(user.get_fullname(),message.to_name)
-        self.assertEqual(message.subject,'Zdrofit -automatyczna rejestracja - błąd')
+        self.assertEqual(message.subject,'GymBooker -automatyczna rejestracja - błąd')
         self.assertEqual(config.get(section='sendinblue', option='from_email'),message.from_email)
         self.assertEqual(config.get(section='sendinblue', option='from_name'),message.from_name)
 

@@ -8,10 +8,11 @@ class BaseEmail(ABC):
 
     message: HtmlMessage = None
 
-    def __init__(self, user: User, activity: Activity):
+    def __init__(self, user: User, activity_to_book: Activity, activity_booked: Activity):
 
         self.config = AppConfig()
-        self.activity = activity
+        self.activity_to_book = activity_to_book
+        self.activity_booked = activity_booked
         self.user = user
         self.message = self.prepare_message()
 
