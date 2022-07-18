@@ -1,7 +1,7 @@
 # My 
 local_test.py
-scrapper.ini
-
+gymbooker.ini
+gymbooker.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

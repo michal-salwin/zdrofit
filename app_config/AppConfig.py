@@ -9,7 +9,7 @@ class AppConfig (object):
 
     def __init__(self):
         self.__conf = configparser.ConfigParser()
-        self.__conf.read_file(codecs.open('scrapper.ini','r','UTF8'))
+        self.__conf.read_file(codecs.open('gymbooker.ini','r','UTF8'))
     
     def get(self, section: str, option: str):
         return self.__conf.get(section=section,option=option)

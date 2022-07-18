@@ -8,7 +8,7 @@ class AppLogger:
         return cls.instance
 
     def __init__(self):
-         logging.basicConfig(filename='scrapper.log',
+         logging.basicConfig(filename='gymbooker.log',
                             filemode='a',
                             format='%(asctime)s - %(message)s', 
                             level=logging.INFO)
