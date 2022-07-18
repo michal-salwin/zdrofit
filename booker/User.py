@@ -31,7 +31,7 @@ class User:
         return self.__first_name_voc
 
     def get_surname(self) -> str:
-        return self.__surnamee
+        return self.__surname
 
     def get_fullname(self)->str:
         return f'{self.__first_name} {self.__surname}'

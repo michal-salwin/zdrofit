@@ -15,4 +15,4 @@ class AppConfig (object):
         return self.__conf.get(section=section,option=option)
 
     def get_account_param(self, account: str, option: str):
-        return self.__conf.get(section=f'zdrofit.account.{account}',option=option)
+        return self.__conf.get(section=f'account.{account}',option=option)

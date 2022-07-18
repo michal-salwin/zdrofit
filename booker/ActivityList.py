@@ -18,7 +18,8 @@ class ActivityList:
             print ("Activity list is empty.")
 
     def filter_by_activity(self, activities):
-        self.activity_list = [x for x in self.activity_list if x.name in activities]
+        if activities:
+            self.activity_list = [x for x in self.activity_list if x.name in activities]
 
     def filter_by_status(self,status):
         self.activity_list = [x for x in self.activity_list if x.status == status]

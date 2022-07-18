@@ -1,7 +1,7 @@
 
 from booker.Activity import Activity
-from booker.Club import Club
-from booker.activity_list_builder.ActivityListBuilder import ActivityListBuilder
+from booker.club.ZdrofitClub import Club
+from booker.activity_list.ActivityListBuilder import ActivityListBuilder
 import json
 from datetime import date
 
