@@ -2,6 +2,7 @@ from blueemail.EmailActivityNotFound import EmailActivityNotFound
 from blueemail.EmailMaxRetryExceeded import EmailMaxRetryExceeded
 from blueemail.EmailSender import EmailSender
 from blueemail.EmailSuccess import EmailSuccess
+from booker.BookingStatsCollector import BookingStatsCollector
 from booker.activity_list.ActivityListBuilder import ActivityListBuilder
 
 
@@ -70,6 +71,8 @@ class Booker:
         
         self.logger.info(f"Trying to book {activity_to_book.name} at club: {activity_to_book.club.get_name()}, weekday: {activity_to_book.weekday}  hour: {activity_to_book.hour}")
         
+        booking_stats_collector = BookingStatsCollector(nr_of_retries,seconds_between_retry)
+
         try:
             self.__login()
             activity_list = self.get_weekly_classes(activity_to_book.club)
@@ -94,7 +97,7 @@ class Booker:
 
         if activity_list.get_activity_count() == 0:
             self.logger.info(f"Requested activity not found in callendar")
-            self.email_sender.send(EmailActivityNotFound(self.user,activity_to_book, None).get_message())
+            self.email_sender.send(EmailActivityNotFound(self.user,activity_to_book).get_message())
             return
 
         activity_booked = activity_list.get_first_activity()
@@ -103,8 +106,9 @@ class Booker:
         while request_nr <= nr_of_retries:
             
             try:
+                booking_stats_collector.add_try()
                 self.__book_class(activity_booked)
-                self.email_sender.send(EmailSuccess(self.user, activity_to_book, activity_booked).get_message())
+                self.email_sender.send(EmailSuccess(self.user, activity_to_book, activity_booked, booking_stats_collector).get_message())
                 self.logger.info(f"Activity {activity_booked.name} booked successfully")
                 return
             except HttpRequestError as e:
@@ -117,7 +121,7 @@ class Booker:
                 request_nr = request_nr + 1
                 sleep(seconds_between_retry)
         
-        self.email_sender.send(EmailMaxRetryExceeded(self.user,activity_to_book, activity_booked).get_message())
+        self.email_sender.send(EmailMaxRetryExceeded(self.user,activity_to_book, booking_stats_collector).get_message())
 
     def cancel_booking(self, activity: Activity, weekday, hour):
         

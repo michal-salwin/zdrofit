@@ -1,6 +1,7 @@
 from blueemail.HtmlMessage import HtmlMessage
 from app_config.AppConfig import AppConfig
 from booker.Activity import Activity
+from booker.BookingStatsCollector import BookingStatsCollector
 from booker.User import User
 from abc import ABC, abstractmethod
 
@@ -8,11 +9,9 @@ class BaseEmail(ABC):
 
     message: HtmlMessage = None
 
-    def __init__(self, user: User, activity_to_book: Activity, activity_booked: Activity):
+    def __init__(self, user: User):
 
         self.config = AppConfig()
-        self.activity_to_book = activity_to_book
-        self.activity_booked = activity_booked
         self.user = user
         self.message = self.prepare_message()
 
@@ -27,6 +26,7 @@ class BaseEmail(ABC):
         message.bcc_email = self.config.get(section='sendinblue', option='bcc_email')
         message.bcc_name = self.config.get(section='sendinblue', option='bcc_name')
         return message
+
 
     @abstractmethod
     def get_message(self) -> HtmlMessage:

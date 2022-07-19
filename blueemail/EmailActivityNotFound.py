@@ -1,8 +1,15 @@
 from blueemail.HtmlMessage import HtmlMessage
+from booker.Activity import Activity
+from booker.BookingStatsCollector import BookingStatsCollector
+from booker.User import User
 from utils.Weekday import Weekday
 from blueemail.BaseEmail import BaseEmail
 
 class EmailActivityNotFound(BaseEmail):
+
+    def __init__(self, user: User, activity_to_book: Activity):
+        super(). __init__(user)
+        self.activity_to_book = activity_to_book
 
     def get_message(self) -> HtmlMessage:
         
