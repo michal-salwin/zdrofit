@@ -16,7 +16,7 @@ class CityFitRestInterface(GymRestInterface):
     
     def login(self, user: User):
         data = {
-            "email": user.get_email(),
+            "email": user.get_login(),
             "password": user.get_password()
         }  
 

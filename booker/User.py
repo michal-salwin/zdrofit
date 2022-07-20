@@ -5,6 +5,7 @@ class User:
     __first_name:     str = None
     __surname:        str = None
     __email:          str = None
+    __login:          str = None
     __password:       str = None
     __first_name_voc: str = None
  
@@ -13,6 +14,7 @@ class User:
         self.__first_name =     config.get_account_param(initials,'first_name')
         self.__surname =        config.get_account_param(initials,'surname')
         self.__email =          config.get_account_param(initials,'email')
+        self.__login =          config.get_account_param(initials,'login')
         self.__password =       config.get_account_param(initials,'password')
         self.__first_name_voc=  config.get_account_param(initials,'first_name_vocative')  
 
@@ -41,6 +43,9 @@ class User:
 
     def get_email(self)->str:
         return self.__email
+
+    def get_login(self)->str:
+        return self.__login
 
     def get_password(self)->str:
         return self.__password

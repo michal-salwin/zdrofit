@@ -15,7 +15,7 @@ class ZdrofitRestInterface(GymRestInterface):
     def login(self, user: User):
         data = {
             "RememberMe": "false",
-            "Login": user.get_email(),
+            "Login": user.get_login(),
             "Password": user.get_password()
         }  
 
